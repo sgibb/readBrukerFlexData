@@ -1,0 +1,26 @@
+\name{.grepAcquDoubleValue}
+\alias{.grepAcquDoubleValue}
+\title{Extracts values from acqu file.}
+\usage{
+  .grepAcquDoubleValue(patternStr, srcStr)
+}
+\arguments{
+  \item{patternStr}{\code{character}, pattern to look for}
+
+  \item{srcStr}{\code{character} where to look for
+  \code{patternStr}}
+}
+\value{
+  \code{double} vector of the value given in
+  \code{patternStr}
+}
+\description{
+  This function is a helper function to extract double
+  values from acqu file.
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.grepAcquValue}},
+  \code{\link[readBrukerFlexData]{.readAcquFile}}
+}
+\keyword{internal}
+

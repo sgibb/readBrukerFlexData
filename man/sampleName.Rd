@@ -1,0 +1,35 @@
+\name{.sampleName}
+\alias{.sampleName}
+\title{Creates sample name.}
+\usage{
+  .sampleName(fidFile)
+}
+\arguments{
+  \item{fidFile}{\code{character}, path to fid file (e.g.
+  \sQuote{Pankreas_HB_L_061019_A10/0_a19/1/1SLin/fid})}
+}
+\value{
+  \code{character}, sample name: e.g
+  \sQuote{Pankreas_HB_L_061019_A10}
+}
+\description{
+  This function guesses the name of current spot from
+  filename.
+}
+\note{
+  WARNING: if the 4th upper directory hasn't an unique name
+  you will get equal names for your spot list
+
+  e.g. the following will create a list with 4 elements but
+  only 2 unique spot names (2-100kDa:0_A1 and
+  2-100kDa:0_B1) \cr ./Run1/2-100kDa/0_A1/1/1SLin/fid \cr
+  ./Run1/2-100kDa/0_B1/1/1SLin/fid \cr
+  ./Run2/2-100kDa/0_A1/1/1SLin/fid \cr
+  ./Run2/2-100kDa/0_B1/1/1SLin/fid \cr
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.readAcquFile}},
+  \code{\link[readBrukerFlexData]{readBrukerFlexFile}}
+}
+\keyword{internal}
+

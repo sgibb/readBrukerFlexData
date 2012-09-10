@@ -1,0 +1,28 @@
+\name{.changePrecision}
+\alias{.changePrecision}
+\title{Change precision.}
+\usage{
+  .changePrecision(x, size)
+}
+\arguments{
+  \item{x}{\code{double}, a vector of double values which
+  should converted.}
+
+  \item{size}{\code{integer}, how many bytes using for
+  target precision e.g. IEEE 754 single precision:
+  \code{size=4}, IEEE 754 double precision: \code{size=8}}
+}
+\value{
+  \code{double}.
+}
+\description{
+  This function converts double values to double values in
+  a given precision (only correctly working for cut a
+  higher precision to a lower one; e.g.  IEEE 754 double
+  precision to IEEE 754 single precision)
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.double2singlePrecision}},
+}
+\keyword{internal}
+

@@ -1,0 +1,30 @@
+\name{.readFidFile}
+\alias{.readFidFile}
+\title{Reads binary fid file.}
+\usage{
+  .readFidFile(fidFile, nIntensities, endian = "little")
+}
+\arguments{
+  \item{fidFile}{\code{character} path to fid file e.g.
+  Pankreas_HB_L_061019_A10/0_a19/1/1SLin/fid}
+
+  \item{nIntensities}{number of data entries (total count;
+  get from acqu file)}
+
+  \item{endian}{endianness of the fid file (\sQuote{little}
+  or \sQuote{big}; default: \sQuote{little})}
+}
+\value{
+  A vector of intensity values.
+}
+\description{
+  This function reads a binary fid file. A fid file
+  contains intensities for all measured time points.
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.readAcquFile}},
+  \code{\link[readBrukerFlexData]{readBrukerFlexFile}}
+}
+\keyword{internal}
+\keyword{IO}
+

@@ -1,0 +1,48 @@
+\name{.double2singlePrecision}
+\alias{.double2singlePrecision}
+\title{Converts double to single precision.}
+\usage{
+  .double2singlePrecision(x)
+}
+\arguments{
+  \item{x}{\code{double}, numeric value which should reduce
+  from double precision to single precision.}
+}
+\value{
+  \code{double} (in single precision).
+}
+\description{
+  This function simulates the conversion of floating point
+  numbers from double precision (64bit, R: \code{double()},
+  C: \code{double}) to single precision (32bit, R:
+  \code{none}, C: \code{float}). It follows IEEE 754
+  standard.
+}
+\details{
+  The same could be done in C by using casts:
+  \preformatted{ double precision32(double value) { float
+  x=value; return (double)x; }}
+}
+\examples{
+## load library
+library("readBrukerFlexData");
+
+## more details
+options(digits=22)
+
+## a test number
+num <- 1/3
+
+num
+readBrukerFlexData:::.double2singlePrecision(num)
+}
+\references{
+  IEEE 754 standard:
+  \url{http://754r.ucbtest.org/standards/754.pdf}
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.changePrecision}},
+  \code{\link[readBrukerFlexData]{.hpc}}
+}
+\keyword{internal}
+

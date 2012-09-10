@@ -1,0 +1,26 @@
+\name{.grepAcquValue}
+\alias{.grepAcquValue}
+\title{Extracts values from acqu file.}
+\usage{
+  .grepAcquValue(patternStr, srcStr)
+}
+\arguments{
+  \item{patternStr}{\code{character}, pattern to look for}
+
+  \item{srcStr}{\code{character} where to look for
+  \code{patternStr}}
+}
+\value{
+  \code{character} vector of the value given in
+  \code{patternStr}
+}
+\description{
+  This function is a helper function to extract values from
+  acqu file.
+}
+\seealso{
+  \code{\link[readBrukerFlexData]{.grepAcquDoubleValue}},
+  \code{\link[readBrukerFlexData]{.readAcquFile}}
+}
+\keyword{internal}
+

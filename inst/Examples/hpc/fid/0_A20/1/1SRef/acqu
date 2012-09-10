@@ -1,0 +1,272 @@
+##TITLE=  XMASS Parameter file
+##JCAMPDX=  5.0
+##DATATYPE=  CONTINUOUS MASS SPECTRUM
+##ORIGIN=  XMASS, Bruker-Daltonics (USA) and Bruker-Daltonik (GER)
+##OWNER=  TOF User
+##SPECTROMETER/DATASYSTEM=  Bruker Flex Series
+##.SPECTROMETER TYPE=  TOF
+##.INLET=  DIRECT
+##.IONIZATION MODE=  LD+
+##$ACQMID= 0 
+##$ACQVSMA= 3 
+##$ACQVSMI= 0 
+##$ADC= 1 
+##$ANT= no 
+##$AQOP_m= 1 
+##$AQ_mod= 0 
+##$ATTEN= 90 
+##$AccE= 20000 
+##$AccE_is= 0 
+##$AppTyp= 0 
+##$BYTORDA= 0 
+##$CIDOn= no 
+##$CTOF= 0 
+##$Calmet= 0 
+##$CapEnt= -4000 
+##$CapExit= 0 
+##$CapHtr= 0 
+##$Corona= 0 
+##$Cycle= 100 
+##$Cyl= 0 
+##$DATE= 0 
+##$DCOff1= 0 
+##$DComp= no 
+##$DE= 625 
+##$DEFLON= yes 
+##$DELAY= 41260 
+##$DIGTYP= 5 
+##$DPCAL1= 0 
+##$DPMASS= 700 
+##$DR_end= 6 
+##$DR_set= 12 
+##$DR_strt= 12 
+##$DS= 0 
+##$DTATYPE= 0 
+##$DW= 0.5 
+##$DataTyp= 0 
+##$DeflOff= 30 
+##$DigTrig= 100 
+##$DryFlow= 0 
+##$DrySW= 0 
+##$DryTemp= 150 
+##$EOSTime= 0.92799997 
+##$EndP= -3500 
+##$Enhance= no 
+##$EsiMode= 0 
+##$Extract= 0 
+##$FASTON= no 
+##$FOV= 20 
+##$FPCAL1= 1 
+##$FPCAL2= 0 
+##$FPCAL3= 0 
+##$FPMASS= 2466.7 
+##$FPON= no 
+##$FPSHIFT= 0 
+##$FW= 2500 
+##$Flatlin= no 
+##$FpWinHi= 0 
+##$FpWinLo= 0 
+##$GDEDLY= 0 
+##$GDEON= yes 
+##$GDETime= 0 
+##$GSpotId= 0 
+##$GSpotno= -1 
+##$Gate= 100 
+##$HITURBO= no 
+##$HPCML3= 0 
+##$HPClBHi= 3698.637732 
+##$HPClBLo= 736.502668 
+##$HPClOrd= 10 
+##$HPClUse= yes 
+##$Hpcgc0= 237.647814332814 
+##$Hpcgc2= -0.0467016003168749 
+##$IS2BNDV= 0 
+##$ISD= no 
+##$InstTyp= 2 
+##$LASP= 1 
+##$LBNDVAL= 0 
+##$LINDIS= 0 
+##$LLNSBND= no 
+##$LasFoc= 35 
+##$LftHV1= 0 
+##$LftHV2= 0 
+##$Lift1= 0 
+##$Lift2= 0 
+##$MC2= 4 
+##$ML1= 415663.238051384 
+##$ML1_raw= 415663.238051384 
+##$ML2= 254.819710202316 
+##$ML2_raw= 254.819710202316 
+##$ML3= -0.0466968987559432 
+##$ML3_raw= -0.0466968987559432 
+##$MW_low= 15 
+##$MapMode= 0 
+##$Masserr= 3.4345675 
+##$NBL= 1 
+##$NC= 0 
+##$NS= 16 
+##$NSdigit= 1 
+##$NebFlow= 0 
+##$NebSW= 0 
+##$NebTemp= 30 
+##$NoSHOTS= 800 
+##$OFFSET= 1000 
+##$PAPS= 0 
+##$PIEDLY= 0 
+##$POLARI= 1 
+##$PR= 1 
+##$PULSER= 10 
+##$PULSREP= 10000 
+##$Parent= 0 
+##$RBNDVAL= 0 
+##$REPHZ= 100 
+##$RFAmp= 600 
+##$RFFreq= 5 
+##$RG= 1 
+##$RLNSBND= no 
+##$Ref2= 13.8 
+##$RefFull= 0 
+##$ReflE= 0 
+##$Repel= 20 
+##$RunDId= 0 
+##$RunId= 0 
+##$SF= 0 
+##$SFO1= 0 
+##$SPType= 0 
+##$SW= 0 
+##$SW_p= 100 
+##$SampId= 0 
+##$Sens1= 100 
+##$Sens2= 0 
+##$Skim1= 20 
+##$SumShot= 0 
+##$Sync= 1 
+##$TD= 113811 
+##$TIB= 5 
+##$TLft= 0 
+##$TLftCor= 0 
+##$TLift= 0 
+##$TPLMS= 0 
+##$TargId= 0 
+##$TgCount= 0 
+##$Trans= 100 
+##$Trap= 45 
+##$UDeflL= 0 
+##$UGrid= 0 
+##$UIS2BND= no 
+##$ULensR= 0 
+##$UPAcc= 0 
+##$URepel= 9000 
+##$Udefl= 0 
+##$UdetL= 1.467 
+##$UdetR= 1.801 
+##$Uhim= 0 
+##$Uhimass= 0 
+##$Uis1= 25 
+##$Uis2= 21.35 
+##$Ulens= 9.5 
+##$Uref_is= 0 
+##$Urefl= 26.299999 
+##$XLens= -50 
+##$YMAX_a= 21035 
+##$YMIN_a= 2316 
+##$ACQMETH= <D:\Methods\flexControlMethods\RP_Proteomics_HPC.par> 
+##$AQ_DATE= <2009-09-09T13:27:18.383+02:00> 
+##$AUNM= <> 
+##$AXMeth= <> 
+##$Aoffs= (0..5) 
+51 51 51 51 51 51 
+##$CALME= (0..15) 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$CALMR= (0..15) 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$CALNAM1= <> 
+##$CALNAM2= <> 
+##$CALNAM3= <> 
+##$CALNAM4= <> 
+##$CALNAM5= <> 
+##$CALNAM6= <> 
+##$CALNAM7= <> 
+##$CHIPNO= <0> 
+##$CMT1= <Angio II in CCA> 
+##$CMT2= <> 
+##$CMT3= <> 
+##$CMT4= <> 
+##$D= (0..31) 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$DOMNAME= <> 
+##$Doffs= (0..5) 
+127 127 127 127 127 127 
+##$FAMeth= <> 
+##$FASTCal= <> 
+##$FCVer= <flexControl 3.0.183.0> 
+##$GEOFILE= <> 
+##$Gelcode= <> 
+##$HPCStr= < V1.0CHPCData  Order 10 vCoeff V1.0VectorDouble 11 -0.48579224953906053 0.0009361303203700988 -6.92711401708155e-008 -1.0992953299897006e-009 1.1718229914003113e-012 -5.392578762547374e-016 9.0176664604755316e-020 1.9704001597871883e-023 -1.1794161284667635e-026 2.0351573912658823e-030 -1.2617853301428769e-034  c2 -0.046701600316874939 c0 237.64781433281422 minMass 736.50266799999997 maxMass 3698.6377320000001 bUse 1 endCHPCData > 
+##$HPCal= (0..31) 
+-0.485792249539061 0.000936130320370099 -6.92711401708155E-008 -1.0992953299897E-009 1.17182299140031E-012 -5.39257876254737E-016 9.01766646047553E-020 1.97040015978719E-023 
+-1.17941612846676E-026 2.03515739126588E-030 -1.26178533014288E-034 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$ID_raw= <11FA3197-2BD7-45CC-BADE-10A04D9878B1> 
+##$IN= (0..31) 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 
+##$INSTRUM= <PRF-S02> 
+##$InstrID= <247420.000126> 
+##$LIFTC= (0..2) 
+0 0 0 
+##$MOTPOS= <(-22500.0,-4770.0)> 
+##$Mctrlst= <> 
+##$NTBCal= <V3.0CCalibrator 1 1 0 0 -2147483648 2147483647  V1.0CHPCData  Order 10 vCoeff V1.0VectorDouble 11 -0.48579224953906053 0.0009361303203700988 -6.92711401708155e-008 -1.0992953299897006e-009 1.1718229914003113e-012 -5.392578762547374e-016 9.0176664604755316e-020 1.9704001597871883e-023 -1.1794161284667635e-026 2.0351573912658823e-030 -1.2617853301428769e-034  c2 -0.046701600316874939 c0 237.64781433281422 minMass 736.50266799999997 maxMass 3698.6377320000001 bUse 1 endCHPCData V3.0CTOFCalibrationConstants 41260 0.49999999999999994 254.81971020231555 415663.23805138434 -0.04669689875594317 2 V3.0CTOFCalibrationConstants 41260 0.49999999999999994 259.58151044209001 415789.71090240998 -0.044371972114699003 2  > 
+##$NTBCalr= <V3.0CCalibrator 1 1 0 0 -2147483648 2147483647  V1.0CHPCData  Order 10 vCoeff V1.0VectorDouble 11 -0.48579224953906053 0.0009361303203700988 -6.92711401708155e-008 -1.0992953299897006e-009 1.1718229914003113e-012 -5.392578762547374e-016 9.0176664604755316e-020 1.9704001597871883e-023 -1.1794161284667635e-026 2.0351573912658823e-030 -1.2617853301428769e-034  c2 -0.046701600316874939 c0 237.64781433281422 minMass 736.50266799999997 maxMass 3698.6377320000001 bUse 1 endCHPCData V3.0CTOFCalibrationConstants 41260 0.49999999999999994 254.81971020231555 415663.23805138434 -0.04669689875594317 2 V3.0CTOFCalibrationConstants 41260 0.49999999999999994 259.58151044209001 415789.71090240998 -0.044371972114699003 2  > 
+##$OS9PATH= <> 
+##$OpId= <Tof-user> 
+##$P= (0..31) 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$PARNM= <> 
+##$PATCHNO= <A20> 
+##$PATH= <D:\DATA\Users_data\Strohalm\Imaging\media\pHPMA\pHPMA145\0_A20\1\1SRef> 
+##$PDELAY= (0..3) 
+10 10 10 10 
+##$PDURA= (0..3) 
+10 10 10 10 
+##$PEPURL= <> 
+##$PLMSC= (0..2) 
+0 0 0 
+##$PULPROG= <> 
+##$PostPr= <> 
+##$QS= (0..7) 
+83 83 83 83 83 83 83 83 
+##$RUNNM= <> 
+##$SMOPTS= (0..15) 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+##$SPOTNO= <A20> 
+##$TgIDS= <T_0209520_0020303_0> 
+##$TgSer= <0020303> 
+##$TgTyp= <0209520> 
+##$VDLIST= <DDDDDDDDDDDDDDD> 
+##$VOLTNM= <> 
+##$WEND= (0..3) 
+30000 30000 30000 30000 
+##$WINY= (0..3) 
+3 3 3 3 
+##$WSTART= (0..3) 
+0 0 0 0 
+##$Warplc1= <> 
+##$Warplc2= <> 
+##$XACQVS= <3.0> 
+##$Xml1= <> 
+##END=
+
