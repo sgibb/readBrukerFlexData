@@ -126,14 +126,16 @@
 #' ## read example spectra
 #' ## please note: filterZeroIntensities=TRUE is used for compatibility reasons.
 #' ##              You should NOT use it!
-#' spec <- readBrukerFlexFile(file.path(exampleDirectory, 
+#' noHpcSpec <- readBrukerFlexFile(file.path(exampleDirectory, 
+#'     "hpc/fid/0_A20/1/1SRef/fid"), filterZeroIntensities=TRUE, useHpc=FALSE)
+#' hpcSpec <- readBrukerFlexFile(file.path(exampleDirectory, 
 #'     "hpc/fid/0_A20/1/1SRef/fid"), filterZeroIntensities=TRUE)
 #' 
 #' ## plot spectrum 
-#' plot(spec$metaData$backup$mass, spec$spectrum$intensity, type="l", 
+#' plot(noHpcSpec$spectrum$mass, noHpcSpec$spectrum$intensity, type="l", 
 #'      col="red", xlim=c(1296, 1300))
-#' lines(spec$spectrum$mass, spec$spectrum$intensity, type="l", col="green",
-#'       xlim=c(1296, 1300))
+#' lines(hpcSpec$spectrum$mass, hpcSpec$spectrum$intensity, type="l", 
+#'       col="green", xlim=c(1296, 1300))
 #' legend(x="topright", legend=c("no hpc", "hpc"), col=c("red", "green"), lwd=1)
 #' 
 #' ## show difference between .hpc and original HPC
@@ -148,14 +150,14 @@
 #' 
 #' ## reduce R double precision to single precision because our CompassXport 1.3.5
 #' ## supports only mzXML with precision=32 (only for compatibility reasons)
-#' spec$metaData$backup$mass32 <-
-#'  readBrukerFlexData:::.double2singlePrecision(spec$metaData$backup$mass)
-#' spec$spectrum$mass32 <- 
-#'  readBrukerFlexData:::.double2singlePrecision(spec$spectrum$mass)
+#' noHpcSpec$spectrum$mass32 <-
+#'  readBrukerFlexData:::.double2singlePrecision(noHpcSpec$spectrum$mass)
+#' hpcSpec$spectrum$mass32 <- 
+#'  readBrukerFlexData:::.double2singlePrecision(hpcSpec$spectrum$mass)
 #' 
 #' ## calculate deviance
-#' d <- spec$metaData$backup$mass32-cpSpecHpcMzXml$spectrum$mass;
-#' dHPC <- spec$spectrum$mass32-cpSpecHpcMzXml$spectrum$mass;
+#' d <- noHpcSpec$spectrum$mass32-cpSpecHpcMzXml$spectrum$mass;
+#' dHPC <- hpcSpec$spectrum$mass32-cpSpecHpcMzXml$spectrum$mass;
 #' 
 #' ## a little summary
 #' cat("without .hpc:\n",
@@ -169,10 +171,10 @@
 #' ##
 #' ## doing things manually
 #' ##
-#' hpcMass <- readBrukerFlexData:::.hpc(mass=spec$metaData$backup$mass,
-#'  minMass=spec$metaData$hpc$limits["minMass"],
-#'  maxMass=spec$metaData$hpc$limits["maxMass"],
-#'  hpcCoefficients=spec$metaData$hpc$coefficients)
+#' hpcMass <- readBrukerFlexData:::.hpc(mass=noHpcSpec$spectrum$mass,
+#'  minMass=noHpcSpec$metaData$hpc$limits["minMass"],
+#'  maxMass=noHpcSpec$metaData$hpc$limits["maxMass"],
+#'  hpcCoefficients=noHpcSpec$metaData$hpc$coefficients)
 #' 
 ## TODO:
 ##  - internal calibration (or something like that)

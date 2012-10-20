@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.5 [2012-10-19]:
+- readBrukerFlexFile doesn't store original mass in metaData$backup anymore if
+  HPC was detected (to get original mass set argument "useHpc" to FALSE).
+
 Version 1.4 [2012-09-10]:
 - Update DESCRIPTION file to use Authors@R and depends on R>=2.14 now.
 - Add warning if LIFT mode was used.

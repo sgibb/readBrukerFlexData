@@ -221,12 +221,9 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
 
   if (isHPCused) {
     ## TODO: fix equations in .hpc and remove the following warning 
-    warning("The spectrum file ", sQuote(fidFile), " uses HPC.\n",
+    warning("The spectrum file ", sQuote(fidFile), " uses HPC. ",
             "HPC isn't fully supported by readBrukerFlexFile. ",
-            "Please see ", dQuote("?.hpc"), " for details.\n",
-            "Original mass are ", sQuote("metaData$backup$mass"), ".")
-    metaData$backup$mass <- mass
-
+            "Please see ", dQuote("?.hpc"), " for details.")
     mass <- .hpc(mass=mass,
                  minMass=metaData$hpcLimits["minMass"],
                  maxMass=metaData$hpcLimits["maxMass"],
