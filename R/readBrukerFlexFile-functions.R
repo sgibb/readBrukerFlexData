@@ -16,10 +16,10 @@
 ## You should have received a copy of the GNU General Public License
 ## along with readBrukerFlexData. If not, see <http://www.gnu.org/licenses/>
 
-#' Reads mass spectrometry data in Bruker Daltonics' XMASS format.
+#' Reads mass spectrometry data in Bruker Daltonics XMASS format.
 #'
-#' This function reads mass spectrometry data in Bruker Daltonics' XMASS format
-#' used by Bruker Daltonics' mass spectrometer of *flex series (autoflex,
+#' This function reads mass spectrometry data in Bruker Daltonics XMASS format
+#' used by Bruker Daltonics mass spectrometer of *flex series (autoflex,
 #' microflex, ultraflex).
 #'
 #' @details
@@ -74,7 +74,7 @@
 #' $DPCAL1 \tab metaData$deflectionPulserCal1 \tab deflection pulser cal 1 \cr
 #' $DPMASS \tab metaData$deflectionPulserMass \tab deflection pulser mass \cr
 #' $FCVer \tab metaData$flexControlVersion \tab Version of 
-#'  Bruker Daltonics' FlexControl software \cr
+#'  Bruker Daltonics FlexControl software \cr
 #' $ID_raw \tab metaData$id \tab spectrum id \cr
 #' $INSTRUM \tab metaData$instrument \tab e.g. AUTOFLEX \cr
 #' $InstrID \tab metaData$instrumentId \tab ID of mass spectrometer \cr
@@ -110,7 +110,7 @@
 #' \code{filterZeroIntensities}: Change default value is \bold{not recommended}!
 #' If \code{TRUE} all intensities equal zero are removed. 
 #' This parameter exists only to be compatible to 
-#' Bruker Daltonics' CompassXport's mzXML export function. For details see: 
+#' Bruker Daltonics CompassXport's mzXML export function. For details see: 
 #' \sQuote{Release Notes for CompassXport 3.0.3},
 #' cap. 6 \sQuote{Filtering of Zero Intensities}:
 #' \dQuote{Bruker Daltonics' Acquisition Software will compress Analysis raw
@@ -193,7 +193,7 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
   ## REFLECTOR mode
   ## for details see "Release Notes for CompassXport 3.0.3" 
   ## cap. 6 "Filtering of Zero Intensities"
-  ## "Bruker Daltonics’ Acquisition Software will compress Analysis raw 
+  ## "Bruker Daltonics' Acquisition Software will compress Analysis raw 
   ## data. To save on operation time and to keep export file sizes small,
   ## CompassXport 3.0.3 will filter out zero (0.0) intensities
   ## when exporting to mzXML or mzData ..."

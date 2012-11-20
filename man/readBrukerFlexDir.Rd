@@ -1,6 +1,6 @@
 \name{readBrukerFlexDir}
 \alias{readBrukerFlexDir}
-\title{Reads recursively mass spectrometry data in Bruker Daltonics' XMASS format.}
+\title{Reads recursively mass spectrometry data in Bruker Daltonics XMASS format.}
 \usage{
   readBrukerFlexDir(brukerFlexDir,
     removeCalibrationScans = TRUE, removeMetaData = FALSE,
@@ -45,7 +45,7 @@
 }
 \description{
   This function leads recursively all mass spectrometry
-  data in Bruker Daltonics' XMASS format in a specified
+  data in Bruker Daltonics XMASS format in a specified
   directory.
 }
 \details{

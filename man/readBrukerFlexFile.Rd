@@ -1,6 +1,6 @@
 \name{readBrukerFlexFile}
 \alias{readBrukerFlexFile}
-\title{Reads mass spectrometry data in Bruker Daltonics' XMASS format.}
+\title{Reads mass spectrometry data in Bruker Daltonics XMASS format.}
 \usage{
   readBrukerFlexFile(fidFile, removeMetaData = FALSE,
     useHpc = TRUE, filterZeroIntensities = FALSE,
@@ -35,7 +35,7 @@
 }
 \description{
   This function reads mass spectrometry data in Bruker
-  Daltonics' XMASS format used by Bruker Daltonics' mass
+  Daltonics XMASS format used by Bruker Daltonics mass
   spectrometer of *flex series (autoflex, microflex,
   ultraflex).
 }
@@ -92,8 +92,8 @@
   \tab deflection pulser cal 1 \cr $DPMASS \tab
   metaData$deflectionPulserMass \tab deflection pulser mass
   \cr $FCVer \tab metaData$flexControlVersion \tab Version
-  of Bruker Daltonics' FlexControl software \cr $ID_raw
-  \tab metaData$id \tab spectrum id \cr $INSTRUM \tab
+  of Bruker Daltonics FlexControl software \cr $ID_raw \tab
+  metaData$id \tab spectrum id \cr $INSTRUM \tab
   metaData$instrument \tab e.g. AUTOFLEX \cr $InstrID \tab
   metaData$instrumentId \tab ID of mass spectrometer \cr
   $InstTyp \tab metaData$instrumentType \tab instrument
@@ -126,7 +126,7 @@
   \code{filterZeroIntensities}: Change default value is
   \bold{not recommended}! If \code{TRUE} all intensities
   equal zero are removed. This parameter exists only to be
-  compatible to Bruker Daltonics' CompassXport's mzXML
+  compatible to Bruker Daltonics CompassXport's mzXML
   export function. For details see: \sQuote{Release Notes
   for CompassXport 3.0.3}, cap. 6 \sQuote{Filtering of Zero
   Intensities}: \dQuote{Bruker Daltonics' Acquisition

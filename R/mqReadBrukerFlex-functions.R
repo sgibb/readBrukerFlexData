@@ -19,7 +19,7 @@
 #' Reads mass spectrometry data into MALDIquant.
 #'
 #' This function reads all mass spectrometry data in
-#' Bruker Daltonics' XMASS format in a specified path into
+#' Bruker Daltonics XMASS format in a specified path into
 #' \code{\link[MALDIquant]{MALDIquant-package}} 
 #' \code{\link[MALDIquant]{MassSpectrum-class}} objects.
 #'

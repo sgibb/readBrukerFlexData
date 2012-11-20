@@ -16,10 +16,10 @@
 ## You should have received a copy of the GNU General Public License
 ## along with readBrukerFlexData. If not, see <http://www.gnu.org/licenses/>
 
-#' Reads recursively mass spectrometry data in Bruker Daltonics' XMASS format.
+#' Reads recursively mass spectrometry data in Bruker Daltonics XMASS format.
 #'
 #' This function leads recursively all mass spectrometry data in 
-#' Bruker Daltonics' XMASS format in a specified directory.
+#' Bruker Daltonics XMASS format in a specified directory.
 #'
 #' @details
 #' See \code{\link[readBrukerFlexData]{readBrukerFlexFile}}.
