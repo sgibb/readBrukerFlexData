@@ -15,9 +15,9 @@
 
   Package: \tab readBrukerFlexData \cr
 
-  Version: \tab 1.5.1\cr
+  Version: \tab 1.6\cr
 
-  Date: \tab 2012-11-19\cr
+  Date: \tab 2012-12-08\cr
 
   License: \tab GPL (>= 3)\cr
 

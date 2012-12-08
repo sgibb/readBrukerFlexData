@@ -1,8 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
-Version 1.5.1 [2012-11-19]:
-- fix description
+Version 1.6 [2012-12-08]:
+- mqReadBrukerFlex is marked as deprecated. Use
+  MALDIquantForeign::importBrukerFlex instead.
+- fix description.
 
 Version 1.5 [2012-10-19]:
 - readBrukerFlexFile doesn't store original mass in metaData$backup anymore if
