@@ -46,6 +46,10 @@ check: build
 	cd .. ;\
 	$(R_BIN) CMD check $(PACKAGE_NAME)_$(PACKAGE_VERSION).tar.gz --as-cran
 
+win-builder: check
+	cd .. ;\
+	ncftpput -u anonymous -p '' win-builder.r-project.org R-devel $(PACKAGE_NAME)_$(PACKAGE_VERSION).tar.gz
+
 clean: local_remove
 	cd .. ;\
 	$(RM) -rf $(PACKAGE_NAME).Rcheck/ \
