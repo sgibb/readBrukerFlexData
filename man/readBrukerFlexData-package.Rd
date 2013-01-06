@@ -27,7 +27,7 @@
   }
 }
 \author{
-  Sebastian Gibb <\email{mail@sebastiangibb.de}>
+  Sebastian Gibb \email{mail@sebastiangibb.de}
 }
 \references{
   \url{https://github.com/sgibb/readBrukerFlexData}

@@ -42,7 +42,7 @@
 #' 
 #' @docType package
 #' @name readBrukerFlexData-package
-#' @author Sebastian Gibb <\email{mail@@sebastiangibb.de}>
+#' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @references \url{https://github.com/sgibb/readBrukerFlexData} 
 #' @keywords package
 #'
