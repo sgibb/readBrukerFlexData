@@ -115,7 +115,7 @@
 ##      => metaData$path
 ##  $REPHZ
 ##      => metaData$laserRepetition
-##  $SPOTNO: same as $PATCHNO (in older files often empty, that's why we use 
+##  $SPOTNO: same as $PATCHNO (in older files often empty, that's why we use
 ##      $PATHNO instead)
 ##      => metaData$spot
 ##  $TgIDS: target ids
@@ -135,49 +135,49 @@
 ##
 .readAcquFile <- function(fidFile, verbose=FALSE) {
   acquFile <- sub(pattern="fid$", x=fidFile, replacement="acqu")
-  
+
   if (verbose) {
     message("Reading metadata from ", sQuote(acquFile), " ...")
   }
-  
+
   if (!file.exists(acquFile)) {
     stop("File ", sQuote(acquFile), " doesn't exists!")
   }
-  
+
   con <- file(acquFile, "rt")
   acquLines <- readLines(con, n=-1)
   close(con)
-  
+
   ## collect data
   metaData <- list()
-  
+
   ## endianness
   isBigEndian <- as.integer(.grepAcquValue("##\\$BYTORDA=", acquLines)) == 1
   metaData$byteOrder <- ifelse(isBigEndian, "big", "little")
-  
+
   ## obligate
   metaData$number <- as.double(.grepAcquValue("##\\$TD=", acquLines))
   metaData$timeDelay <- .grepAcquDoubleValue("##\\$DELAY=", acquLines)
   metaData$timeDelta <- .grepAcquDoubleValue("##\\$DW=", acquLines)
   metaData$calibrationConstants <-
-    c(c1=.grepAcquDoubleValue("##\\$ML1=", acquLines), 
+    c(c1=.grepAcquDoubleValue("##\\$ML1=", acquLines),
       c2=.grepAcquDoubleValue("##\\$ML2=", acquLines),
       c3=.grepAcquDoubleValue("##\\$ML3=", acquLines))
-  
+
   ## obligate HPC
   metaData$hpcLimits <-
-    c(minMass=.grepAcquDoubleValue("##\\$HPClBLo=", acquLines), 
+    c(minMass=.grepAcquDoubleValue("##\\$HPClBLo=", acquLines),
       maxMass=.grepAcquDoubleValue("##\\$HPClBHi=", acquLines))
   metaData$hpcOrder <- as.double(.grepAcquValue("##\\$HPClOrd=", acquLines))
-  metaData$hpcUse <- 
+  metaData$hpcUse <-
     as.logical(.grepAcquValue("##\\$HPClUse=", acquLines) == "yes")
-  
+
   ## was HPC involved?  metaData$hpcUse seems to be always true
   isHPCused <- (metaData$hpcUse &&
                 metaData$hpcLimits["maxMass"] > 0 &&
-                metaData$hpcLimits["minMass"] > 0 && 
+                metaData$hpcLimits["minMass"] > 0 &&
                 metaData$hpcOrder > 0)
-  
+
   if (isHPCused) {
     hpcStr <- .grepAcquValue("##\\$HPCStr=", acquLines)
     hpcConstants <- .extractHPCConstants(hpcStr)
@@ -185,84 +185,118 @@
     metaData$hpcCalibrationConstant0 <- hpcConstants$calibrationConstant0
     metaData$hpcCalibrationConstant2 <- hpcConstants$calibrationConstant2
   }
-  
+
   ## obligate LIFT
   metaData$lift <- c(.grepAcquDoubleValue("##\\$Lift1=", acquLines),
                      .grepAcquDoubleValue("##\\$Lift2=", acquLines))
   metaData$tlift <- .grepAcquDoubleValue("##\\$TLift=", acquLines)
-  
+
   ## optional
   metaData$dataType <- .grepAcquValue("##DATATYPE=", acquLines)
   metaData$dataSystem <- .grepAcquValue("##SPECTROMETER/DATASYSTEM=", acquLines)
-  metaData$spectrometerType <- 
+  metaData$spectrometerType <-
     .grepAcquValue("##.SPECTROMETER TYPE=", acquLines)
   metaData$inlet <- .grepAcquValue("##.INLET=", acquLines)
   metaData$ionizationMode <- .grepAcquValue("##.IONIZATION MODE=", acquLines)
   metaData$date <- .grepAcquValue("##\\$DATE=", acquLines)
-  
-  
+
+
   metaData$acquisitionMethod <- .grepAcquValue("##\\$ACQMETH=", acquLines)
   metaData$acquisitionDate <- .grepAcquValue("##\\$AQ_DATE=", acquLines)
-  metaData$acquisitionMode <- .grepAcquValue("##\\$AQ_mod=", acquLines)
-  
-  aqop <- as.double(.grepAcquValue("##\\$AQOP_m=", acquLines))
-  metaData$tofMode  <- switch(aqop, 
+  aq_mod <- .grepAcquValue("##\\$AQ_mod=", acquLines)
+  metaData$acquisitionMode <- switch(aq_mod,
+    "0" = { "qf" },
+    "1" = { "qsim" },
+    "2" = { "qseq" },
+    { aq_mod }
+  )
+
+  aqop <- .grepAcquValue("##\\$AQOP_m=", acquLines)
+  metaData$tofMode  <- switch(aqop,
     "0" = { "LINEAR" },
     "1" = { "REFLECTOR" },
     { aqop }
   )
-  
+
   metaData$acquisitionOperatorMode <- metaData$tofMode
-  
+
   metaData$laserAttenuation <- .grepAcquDoubleValue("##\\$ATTEN=", acquLines)
-  
+
   metaData$comments <- .grepAcquValue("##\\$CMT.*=", acquLines)
-  
-  metaData$deflection <- 
+
+  metaData$deflection <-
     as.logical(.grepAcquValue("##\\$DEFLON=", acquLines) == "yes")
-  metaData$digitizerType <- .grepAcquDoubleValue("##\\$DIGTYP=", acquLines)
+
+  digtyp  <- .grepAcquValue("##\\$DIGTYP=", acquLines)
+  metaData$digitizerType <- switch(digtyp,
+      "0" = { "unknown" },
+      "1" = { "Lecroy LSA1000" },
+      "2" = { "Acqiris DP105" },
+      "3" = { "Acqiris DP110" },
+      "4" = { "Acqiris DP211" },
+      "5" = { "Acqiris DP240" },
+      "6" = { "Acqiris AP200" },
+      "7" = { "Acqiris AP240" },
+      "8" = { "Acqiris DC440" },
+      "9" = { "Acqiris DC282" },
+     "10" = { "Acqiris Unknown subtype" },
+     "11" = { "Gage" },
+     "12" = { "Simulator" },
+     "13" = { "Lecroy WaveRunner" },
+     "14" = { "Acqiris U1084A" },
+     "15" = { "NI 5154" },
+     "16" = { "LeCroy LSA2000" },
+     "17" = { "Acqiris DP1400" },
+     "18" = { "NI 5155" },
+     "19" = { "Bruker BD0G5" },
+      { digtyp }
+    )
+
   metaData$deflectionPulserCal1 <-
     .grepAcquDoubleValue("##\\$DPCAL1=", acquLines)
   metaData$deflectionPulserMass <-
     .grepAcquDoubleValue("##\\$DPMASS=", acquLines)
   metaData$flexControlVersion <- .grepAcquValue("##\\$FCVer=", acquLines)
   metaData$id <- .grepAcquValue("##\\$ID_raw=", acquLines)
-  
+
   metaData$instrument <- .grepAcquValue("##\\$INSTRUM=", acquLines)
   metaData$instrumentId <- .grepAcquValue("##\\$InstrID=", acquLines)
   metaData$instrumentType <- .grepAcquValue("##\\$InstTyp=", acquLines)
-  
+
   metaData$massError <- .grepAcquDoubleValue("##\\$Masserr=", acquLines)
-  
+
   metaData$laserShots <- as.double(.grepAcquValue("##\\$NoSHOTS=", acquLines))
-  
+
   if (metaData$laserShots == 0) {
     warning("File ", sQuote(fidFile), " seems to be empty because ",
             "no laser shots applied to this sample.")
   }
-  
+
   metaData$patch <- .grepAcquValue("##\\$PATCHNO=", acquLines)
   metaData$path <- .grepAcquValue("##\\$PATH=", acquLines)
   metaData$laserRepetition <- .grepAcquDoubleValue("##\\$REPHZ=", acquLines)
   metaData$spot <- .grepAcquValue("##\\$SPOTNO=", acquLines)
-  
-  sptype <- as.double(.grepAcquValue("##\\$SPType=", acquLines))
-  metaData$spectrumType <- switch(sptype, 
+
+  sptype <- .grepAcquValue("##\\$SPType=", acquLines)
+  metaData$spectrumType <- switch(sptype,
     "0" = { "TOF" },
+    "1" = { "PSD" },
+    "2" = { "LIFT" },
+    "3" = { "PSDSegment" },
     { sptype }
   )
-  
+
   metaData$targetCount <- as.double(.grepAcquValue("##\\$TgCount", acquLines))
   metaData$targetIdString <- .grepAcquValue("##\\$TgIDS", acquLines)
   metaData$targetSerialNumber <- .grepAcquValue("##\\$TgSer", acquLines)
   metaData$targetTypeNumber <- .grepAcquValue("##\\$TgTyp", acquLines)
-  
+
   metaData$file <- fidFile
-  
+
   metaData$sampleName <- .sampleName(fidFile)
   metaData$fullName <- paste(metaData$sampleName, metaData$patch, sep=".")
   metaData$name <- metaData$fullName
-  
+
   return(metaData)
 }
- 
+

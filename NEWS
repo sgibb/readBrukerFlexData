@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.6.1 [2013-02-14]:
+- metaData: update digityzerType, spectrumType, acquisitionMode.
+
 Version 1.6 [2012-12-08]:
 - mqReadBrukerFlex is marked as deprecated. Use
   MALDIquantForeign::importBrukerFlex instead.
@@ -17,7 +20,7 @@ Version 1.4 [2012-09-10]:
 - Roxygenize package.
 
 Version 1.3 [2012-05-06]:
-- mqReadBrukerFlex always returns a list of MassSpectrum objects 
+- mqReadBrukerFlex always returns a list of MassSpectrum objects
   (for a single MassSpectrum object it returns a list, too).
 - Eliminate 4 comments limit.
 
