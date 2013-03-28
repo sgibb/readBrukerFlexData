@@ -1,11 +1,9 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
-Version 1.6.1 [2013-03-08]:
-- Remove LICENSE file
-
-Version 1.6.1 [2013-02-14]:
+Version 1.6.1 [2013-03-28]:
 - metaData: update digityzerType, spectrumType, acquisitionMode.
+- Remove LICENSE file.
 
 Version 1.6 [2012-12-08]:
 - mqReadBrukerFlex is marked as deprecated. Use

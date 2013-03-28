@@ -30,7 +30,7 @@
 #' ./Run2/2-100kDa/0_A1/1/1SLin/fid \cr
 #' ./Run2/2-100kDa/0_B1/1/1SLin/fid \cr
 #'
-#' @param fidFile \code{character}, path to fid file 
+#' @param fidFile \code{character}, path to fid file
 #'  (e.g. \sQuote{Pankreas_HB_L_061019_A10/0_a19/1/1SLin/fid})
 #'
 #' @return
@@ -45,24 +45,24 @@
 .sampleName <- function(fidFile) {
   # regular expression for directory separator (on unix: /+, on windows \+)
   # sadly .Platform$file.sep == "/" on both
-  fidFile <- chartr(old="\\", new="/", x=fidFile);
+  fidFile <- chartr(old="\\", new="/", x=fidFile)
 
   # create array of directories (each element == one directory)
-  dirs <- strsplit(x=fidFile, split="/")[[1]];
+  dirs <- strsplit(x=fidFile, split="/")[[1]]
 
-  numDirs <- length(dirs);
+  numDirs <- length(dirs)
 
-  sampleName <- NA;
+  sampleName <- NA
 
   if (numDirs > 4) {
-    sampleName <- dirs[numDirs-4];
+    sampleName <- dirs[numDirs-4]
 
     # -, : or something like that causes errors in names()
     # TODO: use make.names in future releases?
     sampleName <- gsub(pattern="[[:punct:]]|[[:space:]]", replacement="_",
-                       x=sampleName);
-  } 
+                       x=sampleName)
+  }
 
-  return(sampleName);
+  return(sampleName)
 }
 

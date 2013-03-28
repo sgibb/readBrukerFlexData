@@ -25,9 +25,10 @@
 }
 \examples{
 ## load library
-library("readBrukerFlexData");
+library("readBrukerFlexData")
 
-## more details
+## show more details
+oldDigits <- options()$digits
 options(digits=22)
 
 ## a test number
@@ -35,6 +36,9 @@ num <- 1/3
 
 num
 readBrukerFlexData:::.double2singlePrecision(num)
+
+## reset digits option
+options(digits=oldDigits)
 }
 \references{
   IEEE 754 standard:
