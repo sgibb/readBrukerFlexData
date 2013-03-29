@@ -1,4 +1,4 @@
-## Copyright 2010-2012 Sebastian Gibb
+## Copyright 2010-2013 Sebastian Gibb
 ## <mail@sebastiangibb.de>
 ##
 ## This file is part of readBrukerFlexData for R and related languages.
@@ -204,19 +204,23 @@
   metaData$acquisitionMethod <- .grepAcquValue("##\\$ACQMETH=", acquLines)
   metaData$acquisitionDate <- .grepAcquValue("##\\$AQ_DATE=", acquLines)
   aq_mod <- .grepAcquValue("##\\$AQ_mod=", acquLines)
-  metaData$acquisitionMode <- switch(aq_mod,
-    "0" = { "qf" },
-    "1" = { "qsim" },
-    "2" = { "qseq" },
-    { aq_mod }
-  )
+  if (length(aq_mod)) {
+    metaData$acquisitionMode <- switch(aq_mod,
+      "0" = { "qf" },
+      "1" = { "qsim" },
+      "2" = { "qseq" },
+      { aq_mod }
+    )
+  }
 
   aqop <- .grepAcquValue("##\\$AQOP_m=", acquLines)
-  metaData$tofMode  <- switch(aqop,
-    "0" = { "LINEAR" },
-    "1" = { "REFLECTOR" },
-    { aqop }
-  )
+  if (length(aqop)) {
+    metaData$tofMode  <- switch(aqop,
+      "0" = { "LINEAR" },
+      "1" = { "REFLECTOR" },
+      { aqop }
+    )
+  }
 
   metaData$acquisitionOperatorMode <- metaData$tofMode
 
@@ -228,29 +232,31 @@
     as.logical(.grepAcquValue("##\\$DEFLON=", acquLines) == "yes")
 
   digtyp  <- .grepAcquValue("##\\$DIGTYP=", acquLines)
-  metaData$digitizerType <- switch(digtyp,
-      "0" = { "unknown" },
-      "1" = { "Lecroy LSA1000" },
-      "2" = { "Acqiris DP105" },
-      "3" = { "Acqiris DP110" },
-      "4" = { "Acqiris DP211" },
-      "5" = { "Acqiris DP240" },
-      "6" = { "Acqiris AP200" },
-      "7" = { "Acqiris AP240" },
-      "8" = { "Acqiris DC440" },
-      "9" = { "Acqiris DC282" },
-     "10" = { "Acqiris Unknown subtype" },
-     "11" = { "Gage" },
-     "12" = { "Simulator" },
-     "13" = { "Lecroy WaveRunner" },
-     "14" = { "Acqiris U1084A" },
-     "15" = { "NI 5154" },
-     "16" = { "LeCroy LSA2000" },
-     "17" = { "Acqiris DP1400" },
-     "18" = { "NI 5155" },
-     "19" = { "Bruker BD0G5" },
-      { digtyp }
+  if (length(digtyp)) {
+    metaData$digitizerType <- switch(digtyp,
+        "0" = { "unknown" },
+        "1" = { "Lecroy LSA1000" },
+        "2" = { "Acqiris DP105" },
+        "3" = { "Acqiris DP110" },
+        "4" = { "Acqiris DP211" },
+        "5" = { "Acqiris DP240" },
+        "6" = { "Acqiris AP200" },
+        "7" = { "Acqiris AP240" },
+        "8" = { "Acqiris DC440" },
+        "9" = { "Acqiris DC282" },
+       "10" = { "Acqiris Unknown subtype" },
+       "11" = { "Gage" },
+       "12" = { "Simulator" },
+       "13" = { "Lecroy WaveRunner" },
+       "14" = { "Acqiris U1084A" },
+       "15" = { "NI 5154" },
+       "16" = { "LeCroy LSA2000" },
+       "17" = { "Acqiris DP1400" },
+       "18" = { "NI 5155" },
+       "19" = { "Bruker BD0G5" },
+        { digtyp }
     )
+  }
 
   metaData$deflectionPulserCal1 <-
     .grepAcquDoubleValue("##\\$DPCAL1=", acquLines)
@@ -278,13 +284,15 @@
   metaData$spot <- .grepAcquValue("##\\$SPOTNO=", acquLines)
 
   sptype <- .grepAcquValue("##\\$SPType=", acquLines)
-  metaData$spectrumType <- switch(sptype,
-    "0" = { "TOF" },
-    "1" = { "PSD" },
-    "2" = { "LIFT" },
-    "3" = { "PSDSegment" },
-    { sptype }
-  )
+  if (length(sptype)) {
+    metaData$spectrumType <- switch(sptype,
+      "0" = { "TOF" },
+      "1" = { "PSD" },
+      "2" = { "LIFT" },
+      "3" = { "PSDSegment" },
+      { sptype }
+    )
+  }
 
   metaData$targetCount <- as.double(.grepAcquValue("##\\$TgCount", acquLines))
   metaData$targetIdString <- .grepAcquValue("##\\$TgIDS", acquLines)

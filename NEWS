@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.6.2 [2013-03-28]:
+- Fix: empty digityzerType, spectrumType, acquisitionMode throw an error.
+
 Version 1.6.1 [2013-03-28]:
 - metaData: update digityzerType, spectrumType, acquisitionMode.
 - Remove LICENSE file.
