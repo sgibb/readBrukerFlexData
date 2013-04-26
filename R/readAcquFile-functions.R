@@ -116,7 +116,7 @@
 ##  $REPHZ
 ##      => metaData$laserRepetition
 ##  $SPOTNO: same as $PATCHNO (in older files often empty, that's why we use
-##      $PATHNO instead)
+##      $PATCHNO instead)
 ##      => metaData$spot
 ##  $TgIDS: target ids
 ##      => metaData$targetIdString
@@ -279,6 +279,20 @@
   }
 
   metaData$patch <- .grepAcquValue("##\\$PATCHNO=", acquLines)
+
+  ## imaging data
+  if (length(metaData$patch) &&
+      grepl(pattern="(R[0-9]+)?X[0-9]+Y[0-9]+", x=metaData$patch,
+            ignore.case=TRUE)) {
+    rx <- gregexpr(pattern="[XY][0-9]+", text=metaData$patch)[[1]]
+    pos <- substring(metaData$patch, rx+1, rx+attr(rx, "match.length")-1)
+
+    if (length(pos) == 2) {
+      pos <- as.double(pos)
+      metaData$imaging <- list(pos=c(x=pos[1], y=pos[2]))
+    }
+  }
+
   metaData$path <- .grepAcquValue("##\\$PATH=", acquLines)
   metaData$laserRepetition <- .grepAcquDoubleValue("##\\$REPHZ=", acquLines)
   metaData$spot <- .grepAcquValue("##\\$SPOTNO=", acquLines)
