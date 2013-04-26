@@ -14,7 +14,10 @@ All trademarks are owned by or licensed to Bruker Daltonics.
 
 ## Install
 
-```R
+```s
 install.packages("readBrukerFlexData")
 ```
 
+## Build status
+
+[![Build Status](https://travis-ci.org/sgibb/readBrukerFlexData.png?branch=master)](https://travis-ci.org/sgibb/readBrukerFlexData)
