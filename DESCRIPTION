@@ -1,6 +1,6 @@
 Package: readBrukerFlexData
 Version: 1.6.3
-Date: 2013-04-26
+Date: 2013-04-28
 Title: Reads mass spectrometry data in Bruker *flex format
 Authors@R: person("Sebastian", "Gibb", role=c("aut", "cre"),
     email="mail@sebastiangibb.de")

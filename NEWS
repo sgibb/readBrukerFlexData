@@ -1,7 +1,7 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
-Version 1.6.3 [2013-04-26]:
+Version 1.6.3 [2013-04-28]:
 - Fetch spectrum position from IMS data files.
 
 Version 1.6.2 [2013-03-28]:
