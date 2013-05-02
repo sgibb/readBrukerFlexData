@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.6.4 [2013-05-02]:
+- Replace all paste(..., sep="") by paste0;
+  now readBrukerFlexData depends on R >= 2.15.
+
 Version 1.6.3 [2013-04-28]:
 - Fetch spectrum position from IMS data files.
 

@@ -30,9 +30,9 @@
 #'
 #' Package: \tab readBrukerFlexData \cr
 #'
-#' Version: \tab 1.6.3\cr
+#' Version: \tab 1.6.4\cr
 #'
-#' Date: \tab 2013-04-28\cr
+#' Date: \tab 2013-05-02\cr
 #'
 #' License: \tab GPL (>= 3)\cr
 #'
