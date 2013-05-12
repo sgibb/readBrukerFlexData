@@ -1,7 +1,8 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
-Version 1.6.4 [2013-05-02]:
+Version 1.6.4 [2013-05-12]:
+- Always return intensitiy values as "double".
 - Replace all paste(..., sep="") by paste0;
   now readBrukerFlexData depends on R >= 2.15.
 
