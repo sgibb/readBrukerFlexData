@@ -189,7 +189,8 @@
   ##         before: reduce calculation time
   ##         after: produce better results
   ##          I also don't know whether to use >= or > (<=, <).
-  m <- mass[mass >= minMass & mass <= maxMass]
+  hpcRange <- mass >= minMass & mass <= maxMass
+  m <- mass[hpcRange]
 
   ## correction=c[0] + c[1]*cal_mass^1 + ... + c[n]*cal_mass^n
   ## mass=cal_mass - correction
@@ -198,7 +199,7 @@
     return(x - sum(hpcCoefficients * x^(0:l)))
   })
 
-  mass[mass >= minMass & mass <= maxMass] <- m
+  mass[hpcRange] <- m
 
   return(mass)
 }
