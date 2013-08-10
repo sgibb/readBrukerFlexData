@@ -12,6 +12,11 @@ Bruker Daltonics.
 
 All trademarks are owned by or licensed to Bruker Daltonics.
 
+## File Format
+
+See the [wiki](https://github.com/sgibb/readBrukerFlexData/wiki) for notes about
+the file format.
+
 ## Install
 
 ```s

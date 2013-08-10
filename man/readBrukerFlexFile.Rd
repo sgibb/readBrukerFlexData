@@ -163,6 +163,7 @@ print(spec$metaData)
 plot(spec$spectrum$mass, spec$spectrum$intensity, type="l", col="red")
 }
 \seealso{
+  \url{https://github.com/sgibb/readBrukerFlexData/wiki},
   \code{\link[readBrukerFlexData]{readBrukerFlexDir}},
   \code{\link[readBrukerFlexData]{.hpc}}
 }
