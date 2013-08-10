@@ -4,7 +4,7 @@
 \usage{
   readBrukerFlexFile(fidFile, removeMetaData = FALSE,
     useHpc = TRUE, filterZeroIntensities = FALSE,
-    verbose = FALSE)
+    keepNegativeIntensities = FALSE, verbose = FALSE)
 }
 \arguments{
   \item{fidFile}{\code{character}, path to \emph{fid} file
@@ -21,6 +21,11 @@
   \item{filterZeroIntensities}{\code{logical}, don't change
   it.  If \code{TRUE} all intensities equal \code{0.0} are
   removed.  (see also: \sQuote{Details} section)}
+
+  \item{keepNegativeIntensities}{\code{logical}, don't
+  change it.  If \code{FALSE} all intensities less than
+  zero are replaced by zero.  (see also: \sQuote{Details}
+  section)}
 
   \item{verbose}{\code{logical}, print verbose messages?}
 }
@@ -134,6 +139,11 @@
   operation time and to keep export file sizes small,
   CompassXport 3.0.3 will filter out zero (0.0) intensities
   when exporting to mzXML or mzData \ldots}
+
+  \code{keepNegativeIntensities}: Change default value is
+  \bold{not recommended}! If \code{TRUE} negative intensity
+  values are not replaced by zero. This parameter exists
+  only to be compatible to Bruker Daltonics CompassXport.
 }
 \examples{
 ## load library
