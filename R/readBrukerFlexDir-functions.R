@@ -53,6 +53,7 @@
 #'
 #' @export
 #' @seealso
+#'  \code{\link[MALDIquantForeign]{importBrukerFlex}},
 #'  \code{\link[readBrukerFlexData]{readBrukerFlexFile}},
 #'  \code{\link[readBrukerFlexData]{.hpc}}
 #' @rdname readBrukerFlexDir

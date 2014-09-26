@@ -152,6 +152,7 @@
 #' @export
 #' @seealso
 #'  \url{https://github.com/sgibb/readBrukerFlexData/wiki},
+#'  \code{\link[MALDIquantForeign]{importBrukerFlex}},
 #'  \code{\link[readBrukerFlexData]{readBrukerFlexDir}},
 #'  \code{\link[readBrukerFlexData]{.hpc}}
 #' @keywords IO

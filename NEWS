@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8 [2014-09-26]:
+- mqReadBrukerFlex is removed. Use MALDIquantForeign::importBrukerFlex instead.
+
 Version 1.7 [2013-08-10]:
 - Always return intensity values as "double".
 - Now all negative intensity values are replaced by zero.

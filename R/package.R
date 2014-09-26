@@ -1,4 +1,4 @@
-## Copyright 2010-2012 Sebastian Gibb
+## Copyright 2010-2014 Sebastian Gibb
 ## <mail@sebastiangibb.de>
 ##
 ## This file is part of readBrukerFlexData for R and related languages.
@@ -21,29 +21,46 @@
 #' The readBrukerFlexData package reads data files acquired by MALDI-TOF MS on
 #' Bruker Daltonics machines of the *flex series. (autoflex,
 #' microflex, ultraflex). \cr
-#' The package was developed \emph{without} any knowledge nor even support by 
+#' The package was developed \emph{without} any knowledge nor even support by
 #' Bruker Daltonics.
 #' \cr \cr
 #' All trademarks are owned by or licensed to Bruker Daltonics.
-#' 
+#'
 #' \tabular{ll}{
 #'
 #' Package: \tab readBrukerFlexData \cr
 #'
-#' Version: \tab 1.7\cr
+#' Version: \tab 1.8\cr
 #'
-#' Date: \tab 2013-08-10\cr
+#' Date: \tab 2014-09-26\cr
 #'
 #' License: \tab GPL (>= 3)\cr
 #'
 #' URL: \tab \url{https://github.com/sgibb/readBrukerFlexData}\cr
 #'
 #' }
-#' 
+#'
 #' @docType package
 #' @name readBrukerFlexData-package
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
-#' @references \url{https://github.com/sgibb/readBrukerFlexData} 
+#' @references \url{https://github.com/sgibb/readBrukerFlexData}
 #' @keywords package
+#' @rdname readBrukerFlexData-package
 #'
 NULL
+
+#' These functions are defunct and no longer available.
+#'
+#' \describe{
+#'  \item{mqReadBrukerFlex:}{use
+#'    \code{\link[MALDIquantForeign]{importBrukerFlex}} instead.}
+#' }
+#'
+#' @title Removed functions in package \pkg{readBrukerFlexData}
+#' @keywords internal
+#' @name readBrukerFlexData-defunct
+#' @aliases mqReadBrukerFlex
+#' @rdname readBrukerFlexData-defunct
+#'
+NULL
+

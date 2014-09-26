@@ -74,7 +74,8 @@ for (i in seq(along=spec)) {
 legend(x="topright", legend=legendStr, col=rainbow(l), lwd=1)
 }
 \seealso{
-\code{\link[readBrukerFlexData]{readBrukerFlexFile}},
+\code{\link[MALDIquantForeign]{importBrukerFlex}},
+ \code{\link[readBrukerFlexData]{readBrukerFlexFile}},
  \code{\link[readBrukerFlexData]{.hpc}}
 }
 \keyword{IO}
