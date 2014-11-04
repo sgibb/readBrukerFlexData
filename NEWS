@@ -1,6 +1,11 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8.1 [2014-11-04]:
+- Fix: Reading a file that has no values for "HPClUse" or "Lift1"/"Lift2"
+  failed.
+  Thanks to Christoph Lange <christoph@clange.de> for reporting this problem.
+
 Version 1.8 [2014-09-26]:
 - mqReadBrukerFlex is removed. Use MALDIquantForeign::importBrukerFlex instead.
 
