@@ -249,8 +249,8 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
   ## TODO: add LIFT support
 
   ## was LIFT involved?
-  isLIFTused <- all(metaData$lift != 0) || metaData$tlift != 0 ||
-                metaData$spectrumType == "LIFT"
+  isLIFTused <- isTRUE(all(metaData$lift != 0) || metaData$tlift != 0 ||
+                       metaData$spectrumType == "LIFT")
 
   if (isLIFTused) {
     ## TODO: add LIFT support
