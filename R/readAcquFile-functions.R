@@ -173,10 +173,10 @@
     as.logical(.grepAcquValue("##\\$HPClUse=", acquLines) == "yes")
 
   ## was HPC involved?  metaData$hpcUse seems to be always true
-  isHPCused <- (metaData$hpcUse &&
-                metaData$hpcLimits["maxMass"] > 0 &&
-                metaData$hpcLimits["minMass"] > 0 &&
-                metaData$hpcOrder > 0)
+  isHPCused <- isTRUE(metaData$hpcUse &&
+                      metaData$hpcLimits["maxMass"] > 0 &&
+                      metaData$hpcLimits["minMass"] > 0 &&
+                      metaData$hpcOrder > 0)
 
   if (isHPCused) {
     hpcStr <- .grepAcquValue("##\\$HPCStr=", acquLines)
