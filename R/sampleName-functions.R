@@ -1,4 +1,4 @@
-## Copyright 2010-2012 Sebastian Gibb
+## Copyright 2010-2014 Sebastian Gibb
 ## <mail@sebastiangibb.de>
 ##
 ## This file is part of readBrukerFlexData for R and related languages.
@@ -48,14 +48,23 @@
   fidFile <- chartr(old="\\", new="/", x=fidFile)
 
   # create array of directories (each element == one directory)
-  dirs <- strsplit(x=fidFile, split="/")[[1]]
+  dirs <- strsplit(x=fidFile, split="/")[[1L]]
 
   numDirs <- length(dirs)
 
   sampleName <- NA
 
-  if (numDirs > 4) {
-    sampleName <- dirs[numDirs-4]
+  ## old FlexAnalysis seems to have the following directories
+  ## 0_L20_1SLin/fid
+  ## vs the more recent FlexAnalysis versions use
+  ## 0/L20/1SLin/fid
+  isShortPath <- isTRUE(numDirs > 2 &&
+                        grepl("[0-9]+_[A-z][0-9]+_[0-9][A-z]+$",
+                              dirs[numDirs - 1L]))
+  if (isShortPath) {
+    sampleName <- dirs[numDirs-2L]
+  } else if (numDirs > 4L ) {
+    sampleName <- dirs[numDirs-4L]
 
     # -, : or something like that causes errors in names()
     # TODO: use make.names in future releases?

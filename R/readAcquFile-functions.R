@@ -1,4 +1,4 @@
-## Copyright 2010-2013 Sebastian Gibb
+## Copyright 2010-2014 Sebastian Gibb
 ## <mail@sebastiangibb.de>
 ##
 ## This file is part of readBrukerFlexData for R and related languages.

@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8.2 [2014-11-05]:
+- dev: Fix sampleName generation for older directory structures.
+  Thanks to Christoph Lange <christoph@clange.de> for reporting this problem.
+
 Version 1.8.1 [2014-11-04]:
 - Fix: Reading a file that has no values for "HPClUse" or "Lift1"/"Lift2"
   failed.
