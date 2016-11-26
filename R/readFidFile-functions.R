@@ -43,9 +43,7 @@
   }
 
   con <- file(fidFile, "rb")
-  intensity <- readBin(con, integer(), n=nIntensities, size=4, endian=endian)
-  close(con)
-
-  return(as.double(intensity))
+  on.exit(close(con))
+  as.double(readBin(con, integer(), n=nIntensities, size=4, endian=endian))
 }
 

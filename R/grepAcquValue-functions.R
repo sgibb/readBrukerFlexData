@@ -19,10 +19,10 @@
 #' Extracts values from acqu file.
 #'
 #' This function is a helper function to extract values from acqu file.
-#' 
+#'
 #' @param patternStr \code{character}, pattern to look for
 #' @param srcStr \code{character} where to look for \code{patternStr}
-#' 
+#'
 #' @return \code{character} vector of the value given in \code{patternStr}
 #'
 #' @seealso
@@ -32,25 +32,23 @@
 #' @keywords internal
 .grepAcquValue <- function(patternStr, srcStr) {
   tmpLine <- grep(pattern=patternStr, x=srcStr, value=TRUE)
-  
+
   ## format e.g.
   ## DATATYPE= CONTINUOUS MASS SPECTRUM
   ## .IONIZATION MODE= LD+
   ## $INSTRUM= <AUTOFLEX>
-  
+
   ## remove front/back pattern environment
-  tmpLine <- gsub(pattern="(^.*= *<?)|(>? *$)", replacement="", x=tmpLine)
-  
-  return(tmpLine)
+  gsub(pattern="(^.*= *<?)|(>? *$)", replacement="", x=tmpLine)
 }
 
 #' Extracts values from acqu file.
 #'
 #' This function is a helper function to extract double values from acqu file.
-#' 
+#'
 #' @param patternStr \code{character}, pattern to look for
 #' @param srcStr \code{character} where to look for \code{patternStr}
-#' 
+#'
 #' @return \code{double} vector of the value given in \code{patternStr}
 #'
 #' @seealso
@@ -60,10 +58,8 @@
 #' @keywords internal
 .grepAcquDoubleValue <- function(patternStr, srcStr) {
   strValue <- .grepAcquValue(patternStr, srcStr)
-  
+
   ## replace comma by dot
-  strValue <- gsub(",", replacement=".", strValue)
-  
-  return(as.double(strValue))
+  as.double(gsub(",", replacement=".", strValue))
 }
- 
+

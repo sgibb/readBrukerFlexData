@@ -64,7 +64,7 @@
   hpcConstants$calibrationConstant0 <-
     as.double(tmpLine[which(tmpLine == "c0") + 1])
 
-  return(hpcConstants)
+  hpcConstants
 }
 
 #' High Precision Calibration
@@ -196,11 +196,11 @@
   ## mass=cal_mass - correction
   l <- length(hpcCoefficients) - 1
   m <- sapply(m, function(x) {
-    return(x - sum(hpcCoefficients * x^(0:l)))
+    x - sum(hpcCoefficients * x^(0:l))
   })
 
   mass[hpcRange] <- m
 
-  return(mass)
+  mass
 }
 

@@ -72,6 +72,6 @@
                        x=sampleName)
   }
 
-  return(sampleName)
+  sampleName
 }
 

@@ -319,6 +319,6 @@
   metaData$fullName <- paste(metaData$sampleName, metaData$patch, sep=".")
   metaData$name <- metaData$fullName
 
-  return(metaData)
+  metaData
 }
 

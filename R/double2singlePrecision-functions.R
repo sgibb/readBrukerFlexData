@@ -58,7 +58,7 @@
 #'
 .double2singlePrecision <- function(x) {
   stopifnot(is.double(x))
-  return(.changePrecision(x, size=4))
+  .changePrecision(x, size=4)
 }
 
 #' Change precision.
@@ -84,7 +84,6 @@
   ## size==8 # 64bit, double precision
   virtualCon <- writeBin(object=x, con=virtualCon, size=size)
   ## re-read data
-  x <- readBin(con=virtualCon, what=double(), size=size, n=length(x))
-  return(x)
+  readBin(con=virtualCon, what=double(), size=size, n=length(x))
 }
 
