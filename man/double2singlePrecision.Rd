@@ -45,7 +45,7 @@ options(digits=oldDigits)
 
 }
 \references{
-IEEE 754 standard: \url{http://754r.ucbtest.org/standards/754.pdf}
+IEEE 754 standard: \url{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=30711&filter=AND(p_Publication_Number:2355)}
 }
 \seealso{
 \code{\link[readBrukerFlexData]{.changePrecision}},

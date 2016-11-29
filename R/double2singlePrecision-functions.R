@@ -38,7 +38,7 @@
 #' @rdname double2singlePrecision
 #' @keywords internal
 #' @references
-#' IEEE 754 standard: \url{http://754r.ucbtest.org/standards/754.pdf}
+#' IEEE 754 standard: \url{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=30711&filter=AND(p_Publication_Number:2355)}
 #' @examples
 #' ## load library
 #' library("readBrukerFlexData")
