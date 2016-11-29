@@ -1,6 +1,10 @@
 # readBrukerFlexData
 
-[readBrukerFlexData on CRAN](http://cran.r-project.org/web/packages/readBrukerFlexData/)
+[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+[![license](http://img.shields.io/badge/license-GPL%20%28%3E=%203%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
+[![metacran version](http://www.r-pkg.org/badges/version/readBrukerFlexData)](https://cran.r-project.org/package=readBrukerFlexData)
+[![metacran downloads](http://cranlogs.r-pkg.org/badges/readBrukerFlexData?color=brightgreen)](https://cran.r-project.org/package=readBrukerFlexData)
+[CRAN check result](http://cran.r-project.org/web/checks/check_results_readBrukerFlexData.html)
 
 ## Description
 
