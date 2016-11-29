@@ -40,8 +40,8 @@
 #'  a \code{list}:
 #'  \itemize{
 #'    \item{\code{hpcConstants$coefficients}: }{double, vector of coefficents}
-#'    \item{\code{hpcConstants$calibrationContant0}: }{c0}
-#'    \item{\code{hpcConstants$calibrationContant2}: }{c2}
+#'    \item{\code{hpcConstants$calibrationConstant0}: }{c0}
+#'    \item{\code{hpcConstants$calibrationConstant2}: }{c2}
 #'  }
 #'
 #' @seealso \code{\link[readBrukerFlexData]{.hpc}}
