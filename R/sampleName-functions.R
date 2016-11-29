@@ -58,7 +58,7 @@
   ## 0_L20_1SLin/fid
   ## vs the more recent FlexAnalysis versions use
   ## 0/L20/1SLin/fid
-  isShortPath <- isTRUE(numDirs > 2 &&
+  isShortPath <- isTRUE(numDirs > 2L &&
                         grepl("[0-9]+_[A-z][0-9]+_[0-9][A-z]+$",
                               dirs[numDirs - 1L]))
   if (isShortPath) {

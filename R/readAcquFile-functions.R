@@ -152,7 +152,7 @@
   metaData <- list()
 
   ## endianness
-  isBigEndian <- as.integer(.grepAcquValue("##\\$BYTORDA=", acquLines)) == 1
+  isBigEndian <- as.integer(.grepAcquValue("##\\$BYTORDA=", acquLines)) == 1L
   metaData$byteOrder <- ifelse(isBigEndian, "big", "little")
 
   ## obligate
@@ -174,9 +174,9 @@
 
   ## was HPC involved?  metaData$hpcUse seems to be always true
   isHPCused <- isTRUE(metaData$hpcUse &&
-                      metaData$hpcLimits["maxMass"] > 0 &&
-                      metaData$hpcLimits["minMass"] > 0 &&
-                      metaData$hpcOrder > 0)
+                      metaData$hpcLimits["maxMass"] > 0L &&
+                      metaData$hpcLimits["minMass"] > 0L &&
+                      metaData$hpcOrder > 0L)
 
   if (isHPCused) {
     hpcStr <- .grepAcquValue("##\\$HPCStr=", acquLines)
@@ -273,7 +273,7 @@
 
   metaData$laserShots <- as.double(.grepAcquValue("##\\$NoSHOTS=", acquLines))
 
-  if (metaData$laserShots == 0) {
+  if (metaData$laserShots == 0L) {
     warning("File ", sQuote(fidFile), " seems to be empty because ",
             "no laser shots applied to this sample.")
   }
@@ -284,12 +284,12 @@
   if (length(metaData$patch) &&
       grepl(pattern="(R[0-9]+)?X[0-9]+Y[0-9]+", x=metaData$patch,
             ignore.case=TRUE)) {
-    rx <- gregexpr(pattern="[XY][0-9]+", text=metaData$patch)[[1]]
-    pos <- substring(metaData$patch, rx+1, rx+attr(rx, "match.length")-1)
+    rx <- gregexpr(pattern="[XY][0-9]+", text=metaData$patch)[[1L]]
+    pos <- substring(metaData$patch, rx+1L, rx+attr(rx, "match.length")-1L)
 
-    if (length(pos) == 2) {
+    if (length(pos) == 2L) {
       pos <- as.double(pos)
-      metaData$imaging <- list(pos=c(x=pos[1], y=pos[2]))
+      metaData$imaging <- list(pos=c(x=pos[1L], y=pos[2L]))
     }
   }
 

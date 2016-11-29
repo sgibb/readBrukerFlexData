@@ -102,7 +102,7 @@ readBrukerFlexDir <- function(brukerFlexDir, removeCalibrationScans=TRUE,
   ## remove calibrations scans?
   if (removeCalibrationScans) {
     calibrationScans <- grep(pattern="[Cc]alibration", x=files, value=TRUE)
-    if (length(calibrationScans) > 0) {
+    if (length(calibrationScans)) {
       files <- setdiff(files, calibrationScans)
     }
   }

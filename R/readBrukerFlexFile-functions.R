@@ -225,9 +225,9 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
 
   ## calculate mass of TOFs
   mass <- .tof2mass(tof,
-                    metaData$calibrationConstants[[1]],
-                    metaData$calibrationConstants[[2]],
-                    metaData$calibrationConstants[[3]])
+                    metaData$calibrationConstants[[1L]],
+                    metaData$calibrationConstants[[2L]],
+                    metaData$calibrationConstants[[3L]])
 
   ## TODO: fix equations in .hpc
 

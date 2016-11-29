@@ -58,7 +58,7 @@
 #'
 .double2singlePrecision <- function(x) {
   stopifnot(is.double(x))
-  .changePrecision(x, size=4)
+  .changePrecision(x, size=4L)
 }
 
 #' Change precision.
