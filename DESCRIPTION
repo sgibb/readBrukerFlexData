@@ -6,8 +6,9 @@ Authors@R: person("Sebastian", "Gibb", role=c("aut", "cre"),
     email="mail@sebastiangibb.de")
 Depends:
     R (>= 3.3.0)
-Description: Reads data files acquired by MALDI-TOF MS on Bruker Daltonics
-    machines of the *flex series.
+Description: Reads data files acquired by Bruker Daltonics' matrix-assisted
+    laser desorption/ionization-time-of-flight mass spectrometer of the *flex
+    series.
 License: GPL (>= 3)
 URL: http://strimmerlab.org/software/maldiquant/
     https://github.com/sgibb/readBrukerFlexData/
