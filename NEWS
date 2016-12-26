@@ -1,6 +1,9 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8.4 [2016-11-29]:
+- Add plain text instrument type in metaData.
+
 Version 1.8.3 [2016-11-29]:
 - Fix broken link to IEEE 754 standard in double2singlePrecision manual page.
 - Some acqu files report a greater number of tof/mass values than the number of

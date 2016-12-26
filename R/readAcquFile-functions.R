@@ -267,7 +267,24 @@
 
   metaData$instrument <- .grepAcquValue("##\\$INSTRUM=", acquLines)
   metaData$instrumentId <- .grepAcquValue("##\\$InstrID=", acquLines)
-  metaData$instrumentType <- .grepAcquValue("##\\$InstTyp=", acquLines)
+
+  instrumentType <- .grepAcquValue("##\\$InstTyp=", acquLines)
+  if (length(instrumentType)) {
+    metaData$instrumentType <- switch(instrumentType,
+        "0" = { "autoflex" },
+        "1" = { "ultraflex" },
+        "2" = { "ultraflexTOF/TOF" },
+        "3" = { "reflex" },
+        "4" = { "biflex" },
+        "5" = { "omniflex" },
+        "6" = { "genoflex" },
+        "7" = { "massarray" },
+        "8" = { "autoflexTOF/TOF" },
+        "9" = { "microflex" },
+       "10" = { "MT10" },
+        { instrumentType }
+    )
+  }
 
   metaData$massError <- .grepAcquDoubleValue("##\\$Masserr=", acquLines)
 
