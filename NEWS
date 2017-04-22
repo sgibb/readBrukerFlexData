@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8.5 [2017-04-22]:
+- Don't errorously convert tof to mass if "V1.0CTOF2CalibrationConstants" was
+  used and throw a warning.
+
 Version 1.8.4 [2016-11-29]:
 - Add plain text instrument type in metaData.
 

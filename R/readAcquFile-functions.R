@@ -186,6 +186,11 @@
     metaData$hpcCalibrationConstant2 <- hpcConstants$calibrationConstant2
   }
 
+  # https://github.com/sgibb/MALDIquantForeign/issues/19
+  metaData$v1tofCalibration <-
+    grepl("V1.0CTOF2CalibrationConstants",
+          .grepAcquValue("##\\$NTBCal=", acquLines))
+
   ## obligate LIFT
   metaData$lift <- c(.grepAcquDoubleValue("##\\$Lift1=", acquLines),
                      .grepAcquDoubleValue("##\\$Lift2=", acquLines))

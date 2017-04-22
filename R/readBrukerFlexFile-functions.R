@@ -254,6 +254,20 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
                  hpcCoefficients=metaData$hpcCoefficients)
   }
 
+  ## TODO: fix V1.0CTOF2 calibration
+  ## https://github.com/sgibb/MALDIquantForeign/issues/19
+  if (isTRUE(metaData$v1tofCalibration)) {
+    warning("The spectrum file ", sQuote(fidFile), " uses ",
+            "V1.0CTOF2CalibrationConstants.\n",
+            "V1.0CTOF2CalibrationConstants aren't supported by ",
+            "readBrukerFlexFile. See ",
+            "https://github.com/sgibb/MALDIquantForeign/issues/19 ",
+            "for details.\n",
+            "Could not convert time-of-flight values into mass!")
+    mass <- tof
+
+  }
+
   ## TODO: add LIFT support
 
   ## was LIFT involved?
