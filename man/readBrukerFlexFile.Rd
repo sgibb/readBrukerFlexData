@@ -171,4 +171,3 @@ plot(spec$spectrum$mass, spec$spectrum$intensity, type="l", col="red")
  \code{\link[readBrukerFlexData]{.hpc}}
 }
 \keyword{IO}
-

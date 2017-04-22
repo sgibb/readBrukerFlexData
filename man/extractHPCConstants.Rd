@@ -38,4 +38,3 @@ metaData$hpcStr.
 \code{\link[readBrukerFlexData]{.hpc}}
 }
 \keyword{internal}
-

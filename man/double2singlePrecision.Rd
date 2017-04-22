@@ -52,4 +52,3 @@ IEEE 754 standard: \url{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumb
  \code{\link[readBrukerFlexData]{.hpc}}
 }
 \keyword{internal}
-

@@ -22,4 +22,3 @@ comparison between Bruker Daltonics' HPC and
  \code{\link[readMzXmlData]{readMzXmlFile}}
 }
 \keyword{datasets}
-

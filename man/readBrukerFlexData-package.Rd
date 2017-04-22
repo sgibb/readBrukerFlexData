@@ -18,9 +18,9 @@ All trademarks are owned by or licensed to Bruker Daltonics.
 
 Package: \tab readBrukerFlexData \cr
 
-Version: \tab 1.8.4\cr
+Version: \tab 1.8.5\cr
 
-Date: \tab 2016-12-26\cr
+Date: \tab 2017-04-22\cr
 
 License: \tab GPL (>= 3)\cr
 
@@ -28,11 +28,10 @@ URL: \tab \url{https://github.com/sgibb/readBrukerFlexData}\cr
 
 }
 }
-\author{
-Sebastian Gibb \email{mail@sebastiangibb.de}
-}
 \references{
 \url{https://github.com/sgibb/readBrukerFlexData}
 }
+\author{
+Sebastian Gibb \email{mail@sebastiangibb.de}
+}
 \keyword{package}
-

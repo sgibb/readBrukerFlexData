@@ -25,4 +25,3 @@ e.g.  IEEE 754 double precision to IEEE 754 single precision)
 \code{\link[readBrukerFlexData]{.double2singlePrecision}},
 }
 \keyword{internal}
-

@@ -81,4 +81,3 @@ legend(x="topright", legend=legendStr, col=rainbow(l), lwd=1)
  \code{\link[readBrukerFlexData]{.hpc}}
 }
 \keyword{IO}
-

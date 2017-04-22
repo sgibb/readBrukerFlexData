@@ -120,4 +120,3 @@ Gobom, J. and Mueller, M. and Egelhofer V. and Theiss, D. and
     \code{\link[readBrukerFlexData]{.double2singlePrecision}}
 }
 \keyword{internal}
-

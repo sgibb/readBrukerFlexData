@@ -32,4 +32,3 @@ WARNING: if the 4th upper directory hasn't an unique name you will get
  \code{\link[readBrukerFlexData]{readBrukerFlexFile}}
 }
 \keyword{internal}
-

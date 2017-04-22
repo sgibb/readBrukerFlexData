@@ -22,4 +22,3 @@ This function is a helper function to extract double values from acqu file.
  \code{\link[readBrukerFlexData]{.readAcquFile}}
 }
 \keyword{internal}
-

@@ -24,4 +24,3 @@ This function reads constants, calibrations values and a lot of more from
 }
 \keyword{IO}
 \keyword{internal}
-
