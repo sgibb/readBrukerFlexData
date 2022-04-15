@@ -231,11 +231,24 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
     tof <- tof[notNull]
   }
 
-  ## calculate mass of TOFs
-  mass <- .tof2mass(tof,
-                    metaData$calibrationConstants[[1L]],
-                    metaData$calibrationConstants[[2L]],
-                    metaData$calibrationConstants[[3L]])
+  ## TODO: fix V1.0CTOF2 calibration
+  ## https://github.com/sgibb/MALDIquantForeign/issues/19
+  ## https://github.com/sgibb/readBrukerFlexData/issues/3
+  if (isTRUE(metaData$v1tofCalibration)) {
+    warning("The spectrum file ", sQuote(fidFile), " uses ",
+            "V1.0CTOF2CalibrationConstants.\n",
+            "V1.0CTOF2CalibrationConstants aren't fully supported by ",
+            "readBrukerFlexFile. See ",
+            "https://github.com/sgibb/readBrukerFlexData/issues/3 ",
+            "for details.")
+    mass <- .ctof2calibration(tof, metaData$v1tofCalibrationConstants)
+  } else {
+    ## calculate mass of TOFs
+    mass <- .tof2mass(tof,
+                      metaData$calibrationConstants[[1L]],
+                      metaData$calibrationConstants[[2L]],
+                      metaData$calibrationConstants[[3L]])
+  }
 
   ## TODO: fix equations in .hpc
 
@@ -252,20 +265,6 @@ readBrukerFlexFile <- function(fidFile, removeMetaData=FALSE, useHpc=TRUE,
                  minMass=metaData$hpcLimits["minMass"],
                  maxMass=metaData$hpcLimits["maxMass"],
                  hpcCoefficients=metaData$hpcCoefficients)
-  }
-
-  ## TODO: fix V1.0CTOF2 calibration
-  ## https://github.com/sgibb/MALDIquantForeign/issues/19
-  if (isTRUE(metaData$v1tofCalibration)) {
-    warning("The spectrum file ", sQuote(fidFile), " uses ",
-            "V1.0CTOF2CalibrationConstants.\n",
-            "V1.0CTOF2CalibrationConstants aren't supported by ",
-            "readBrukerFlexFile. See ",
-            "https://github.com/sgibb/MALDIquantForeign/issues/19 ",
-            "for details.\n",
-            "Could not convert time-of-flight values into mass!")
-    mass <- tof
-
   }
 
   ## TODO: add LIFT support

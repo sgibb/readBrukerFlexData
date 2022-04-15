@@ -4,9 +4,14 @@
 \alias{readBrukerFlexFile}
 \title{Reads mass spectrometry data in Bruker Daltonics XMASS format.}
 \usage{
-readBrukerFlexFile(fidFile, removeMetaData = FALSE, useHpc = TRUE,
-  filterZeroIntensities = FALSE, keepNegativeIntensities = FALSE,
-  verbose = FALSE)
+readBrukerFlexFile(
+  fidFile,
+  removeMetaData = FALSE,
+  useHpc = TRUE,
+  filterZeroIntensities = FALSE,
+  keepNegativeIntensities = FALSE,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{fidFile}{\code{character}, path to \emph{fid} file which should be

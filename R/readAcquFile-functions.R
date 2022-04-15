@@ -187,9 +187,14 @@
   }
 
   # https://github.com/sgibb/MALDIquantForeign/issues/19
+  # https://github.com/sgibb/readBrukerFlexData/issues/3
   metaData$v1tofCalibration <-
     grepl("V1.0CTOF2CalibrationConstants",
           .grepAcquValue("##\\$NTBCal=", acquLines))
+  metaData$v1tofCalibrationConstants <- 
+    .extractV10CTOF2CalibrationConstants(
+      .grepAcquValue("##\\$NTBCal=", acquLines)
+    )
 
   ## obligate LIFT
   metaData$lift <- c(.grepAcquDoubleValue("##\\$Lift1=", acquLines),

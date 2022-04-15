@@ -13,21 +13,6 @@ Bruker Daltonics.
 \cr \cr
 All trademarks are owned by or licensed to Bruker Daltonics.
 }
-\details{
-\tabular{ll}{
-
-Package: \tab readBrukerFlexData \cr
-
-Version: \tab 1.8.5\cr
-
-Date: \tab 2017-04-22\cr
-
-License: \tab GPL (>= 3)\cr
-
-URL: \tab \url{https://github.com/sgibb/readBrukerFlexData}\cr
-
-}
-}
 \references{
 \url{https://github.com/sgibb/readBrukerFlexData}
 }

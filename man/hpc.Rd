@@ -89,13 +89,13 @@ d <- noHpcSpec$spectrum$mass32-cpSpecHpcMzXml$spectrum$mass
 dHPC <- hpcSpec$spectrum$mass32-cpSpecHpcMzXml$spectrum$mass
 
 ## a little summary
-cat("without .hpc:\\n",
+cat("without .hpc:\n",
     "not matching: ", length(cpSpecHpcMzXml$spectrum$mass[d!=0]), " of ",
     length(cpSpecHpcMzXml$spectrum$mass), "; range: ",
-    range(abs(d[d!=0])), "\\nwith .hpc:\\n",
+    range(abs(d[d!=0])), "\nwith .hpc:\n",
     "not matching: ", length(cpSpecHpcMzXml$spectrum$mass[dHPC!=0]), " of ",
     length(cpSpecHpcMzXml$spectrum$mass), "; range: ",
-    range(abs(d[dHPC!=0])), "\\n")
+    range(abs(d[dHPC!=0])), "\n")
 
 ##
 ## doing things manually

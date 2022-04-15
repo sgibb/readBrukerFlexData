@@ -4,9 +4,15 @@
 \alias{readBrukerFlexDir}
 \title{Reads recursively mass spectrometry data in Bruker Daltonics XMASS format.}
 \usage{
-readBrukerFlexDir(brukerFlexDir, removeCalibrationScans = TRUE,
-  removeMetaData = FALSE, useHpc = TRUE, useSpectraNames = TRUE,
-  filterZeroIntensities = FALSE, verbose = FALSE)
+readBrukerFlexDir(
+  brukerFlexDir,
+  removeCalibrationScans = TRUE,
+  removeMetaData = FALSE,
+  useHpc = TRUE,
+  useSpectraNames = TRUE,
+  filterZeroIntensities = FALSE,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{brukerFlexDir}{\code{character}, path to \emph{directory} which

@@ -1,6 +1,12 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.8.5.99 [2022-04-15]:
+- Add basic support for cubic calibration as encoded in
+  "V1.0TOF2CalibrationConstants" (fixes
+  https://github.com/sgibb/readBrukerFlexData/issues/3).
+  Contributed by Samuel Granjeaud (@SamGG) and Alan Race (@AlanRace).
+
 Version 1.8.5 [2017-04-22]:
 - Don't errorously convert tof to mass if "V1.0CTOF2CalibrationConstants" was
   used and throw a warning.
