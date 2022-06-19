@@ -27,7 +27,7 @@
 #' Cubic calibration
 #'
 #' Only basic support (not 100\% identical results) for Bruker Daltonics' cubic
-#' calibration (encoded in `"##\$NTBCal"` as `"V1.0CTOF2CalibrationConstants"`).
+#' calibration (encoded in `"##$NTBCal"` as `"V1.0CTOF2CalibrationConstants"`).
 #' This is an internal function and should normally not used by the user.
 #'
 #' @param tof \code{double}, time of flight.
