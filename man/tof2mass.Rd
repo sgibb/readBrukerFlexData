@@ -27,7 +27,7 @@ based on the following article:
  \dQuote{A database application for pre-processing, storage and comparison
  of mass spectra derived from patients and controls},
  \emph{BMC Bioinformatics}, \bold{7}: 403
- \url{https://www.ncbi.nlm.nih.gov/pubmed/16953879}
+ \url{https://pubmed.ncbi.nlm.nih.gov/16953879/}
 }
 \details{
 Arguments are imported from metadata (acqu-file).

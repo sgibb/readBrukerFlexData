@@ -89,7 +89,7 @@
 #'  \dQuote{A Calibration Method That Simplifies and Improves Accurate
 #'   Determination of Peptide Molecular mass by MALDI-TOF MS.},
 #'  \emph{Anal Chem} \bold{74}: 3915-3923 \cr
-#'  \url{https://www.ncbi.nlm.nih.gov/pubmed/12175185}
+#'  \url{https://pubmed.ncbi.nlm.nih.gov/12175185/}
 #'
 #' @note
 #' Please note that .hpc is not correct! You have been warned.
@@ -100,7 +100,7 @@
 #'  \dQuote{A Calibration Method That Simplifies and Improves Accurate
 #'   Determination of Peptide Molecular mass by MALDI-TOF MS.},
 #'  \emph{Anal Chem} \bold{74}: 3915-3923 \cr
-#'  \url{https://www.ncbi.nlm.nih.gov/pubmed/12175185}
+#'  \url{https://pubmed.ncbi.nlm.nih.gov/12175185/}
 #'
 #' @seealso
 #'     \code{\link[readBrukerFlexData]{readBrukerFlexDir}},
