@@ -21,24 +21,24 @@
 \description{
 This function calculates mass from time of flight values
 based on the following article:
- Titulaer, M. K. and Siccama, I. and Dekker, J. L. and 
+ Titulaer, M. K. and Siccama, I. and Dekker, J. L. and
  van Rijswijk, A. L. and Heeren R. M. and Sillevis Smitt, P. A. and
  Luider, T. M. (2006) \cr
  \dQuote{A database application for pre-processing, storage and comparison
  of mass spectra derived from patients and controls},
  \emph{BMC Bioinformatics}, \bold{7}: 403
- \url{http://www.ncbi.nlm.nih.gov/pubmed/16953879}
+ \url{https://www.ncbi.nlm.nih.gov/pubmed/16953879}
 }
 \details{
 Arguments are imported from metadata (acqu-file).
 }
 \references{
-Titulaer, M. K. and Siccama, I. and Dekker, J. L. and 
+Titulaer, M. K. and Siccama, I. and Dekker, J. L. and
  van Rijswijk, A. L. and Heeren R. M. and Sillevis Smitt, P. A. and
  Luider, T. M. (2006) \cr
  \dQuote{A database application for pre-processing, storage and comparison
  of mass spectra derived from patients and controls},
  \emph{BMC Bioinformatics}, \bold{7}: 403
- \url{http://www.ncbi.nlm.nih.gov/pubmed/16953879}
+ \url{https://pubmed.ncbi.nlm.nih.gov/16953879/}
 }
 \keyword{internal}

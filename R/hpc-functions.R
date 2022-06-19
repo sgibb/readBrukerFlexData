@@ -14,7 +14,7 @@
 ## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
-## along with readBrukerFlexData. If not, see <http://www.gnu.org/licenses/>
+## along with readBrukerFlexData. If not, see <https://www.gnu.org/licenses/>
 
 #' Extracts High Precision Calibration coefficients.
 #'
@@ -89,7 +89,7 @@
 #'  \dQuote{A Calibration Method That Simplifies and Improves Accurate
 #'   Determination of Peptide Molecular mass by MALDI-TOF MS.},
 #'  \emph{Anal Chem} \bold{74}: 3915-3923 \cr
-#'  \url{http://www.ncbi.nlm.nih.gov/pubmed/12175185}
+#'  \url{https://www.ncbi.nlm.nih.gov/pubmed/12175185}
 #'
 #' @note
 #' Please note that .hpc is not correct! You have been warned.
@@ -100,7 +100,7 @@
 #'  \dQuote{A Calibration Method That Simplifies and Improves Accurate
 #'   Determination of Peptide Molecular mass by MALDI-TOF MS.},
 #'  \emph{Anal Chem} \bold{74}: 3915-3923 \cr
-#'  \url{http://www.ncbi.nlm.nih.gov/pubmed/12175185}
+#'  \url{https://www.ncbi.nlm.nih.gov/pubmed/12175185}
 #'
 #' @seealso
 #'     \code{\link[readBrukerFlexData]{readBrukerFlexDir}},

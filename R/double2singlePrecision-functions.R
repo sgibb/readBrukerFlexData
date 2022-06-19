@@ -14,7 +14,7 @@
 ## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
-## along with readBrukerFlexData. If not, see <http://www.gnu.org/licenses/>
+## along with readBrukerFlexData. If not, see <https://www.gnu.org/licenses/>
 
 #' Converts double to single precision.
 #'
@@ -38,7 +38,7 @@
 #' @rdname double2singlePrecision
 #' @keywords internal
 #' @references
-#' IEEE 754 standard: \url{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=30711&filter=AND(p_Publication_Number:2355)}
+#' IEEE 754 standard: \url{https://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=30711&filter=AND(p_Publication_Number:2355)}
 #' @examples
 #' ## load library
 #' library("readBrukerFlexData")
