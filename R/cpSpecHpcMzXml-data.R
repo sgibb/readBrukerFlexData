@@ -23,7 +23,6 @@
 #' comparison between Bruker Daltonics' HPC and 
 #' \code{\link[readBrukerFlexData]{.hpc}}.
 #'
-#' @usage cpSpecHpcMzXml
 #' @format A list containing a mass and an intensity vector.
 #' @source Examples/hpc/mzXML/hpc.mzXML
 #' @seealso
