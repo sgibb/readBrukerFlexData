@@ -10,7 +10,10 @@ Authors@R:
             comment = c(ORCID = "0000-0001-7406-4443")
         ),
         person("Samuel", "Granjeaud", role = "ctb"),
-        person("Alan", "Race", role = "ctb")
+        person("Alan", "Race", role = "ctb",
+            email = "alan.race@uni-marburg.de",
+            comment = c(ORCID = "0000-0001-8996-2641")
+        )
     )
 Depends:
     R (>= 3.3.0)
