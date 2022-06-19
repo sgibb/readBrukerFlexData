@@ -20,7 +20,8 @@
 #' @noRd
 .extractV10CTOF2CalibrationConstants <- function(x) {
     x <- gsub("^.*V1.0CTOF2CalibrationConstants ([0-9. -]*) V1.0CTOF2CalibrationConstants.*$", "\\1", x)
-    as.numeric(unlist(strsplit(x, " ", fixed = TRUE)))
+    ## suppress warnings about NA introduction for empty strings
+    suppressWarnings(as.numeric(unlist(strsplit(x, " ", fixed = TRUE))))
 }
 
 #' Cubic calibration
@@ -52,7 +53,6 @@
 .ctof2calibration <- function(tof, d) {
     ## e.g.  "V1.0CTOF2CalibrationConstants 48 0.25 3884.868239229128 1164156.9998801197 6.1682474689786355 -0.063083671657452864 -34.362308485323794 2 V1.0CTOF2CalibrationConstants"
     ## DELAY DW ML2 ML1 ML3 A E 2
-    mz <- .tof2mass(tof, d[4], d[3], d[5])
 
     A <- d[6]
     B <- d[5]
@@ -63,6 +63,8 @@
     ## quadratic: 0 = B * (sqrt(m/z))^2 + C * sqrt(m/z) + D(times)
     ## same formula as tof2mass but instead of D(times) = ML3 - tof
     ## it seems to be necessary to use D(times) = tof - ML3
+    ## abs(tof - ML3) seems to be not equivalent
+    ## m <- .tof2mass(tof, d[4], d[3], d[5])
     m <- (-C + sqrt(abs((C * C) - (4 * B * (tof - D))))) / (2 * B)
 
     s <- sign(tof - D)
