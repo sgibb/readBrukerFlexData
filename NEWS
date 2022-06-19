@@ -1,7 +1,7 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
-Version 1.8.5.99 [2022-04-15]:
+Version 1.9.0 [2022-06-19]:
 - Add basic support for cubic calibration as encoded in
   "V1.0TOF2CalibrationConstants" (fixes
   https://github.com/sgibb/readBrukerFlexData/issues/3).
