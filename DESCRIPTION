@@ -27,4 +27,4 @@ URL: https://strimmerlab.github.io/software/maldiquant/
     https://github.com/sgibb/readBrukerFlexData/
 BugReports: https://github.com/sgibb/readBrukerFlexData/issues/
 LazyLoad: yes
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
