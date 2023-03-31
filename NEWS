@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.9.1 [2023-03-31]:
+- Read acqus file if acqu file is missing.
+  Suggested by Daniel Vogel (@herr-vogel).
+
 Version 1.9.0 [2022-06-19]:
 - Add basic support for cubic calibration as encoded in
   "V1.0TOF2CalibrationConstants" (fixes

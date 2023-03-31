@@ -135,13 +135,15 @@
 ##
 .readAcquFile <- function(fidFile, verbose=FALSE) {
   acquFile <- sub(pattern="fid$", x=fidFile, replacement="acqu")
-
-  if (verbose) {
-    message("Reading metadata from ", sQuote(acquFile), " ...")
-  }
+  acquFiles <- c(acquFile, paste0(acquFile, "s"))
+  acquFile <- acquFiles[which.max(file.exists(acquFiles))]
 
   if (!file.exists(acquFile)) {
     stop("File ", sQuote(acquFile), " doesn't exists!")
+  }
+
+  if (verbose) {
+    message("Reading metadata from ", sQuote(acquFile), " ...")
   }
 
   con <- file(acquFile, "rt")
@@ -191,7 +193,7 @@
   metaData$v1tofCalibration <-
     grepl("V1.0CTOF2CalibrationConstants",
           .grepAcquValue("##\\$NTBCal=", acquLines))
-  metaData$v1tofCalibrationConstants <- 
+  metaData$v1tofCalibrationConstants <-
     .extractV10CTOF2CalibrationConstants(
       .grepAcquValue("##\\$NTBCal=", acquLines)
     )
