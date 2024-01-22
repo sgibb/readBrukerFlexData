@@ -21,7 +21,7 @@
 #' This function reads constants, calibrations values and a lot of more from
 #' \emph{acqu} files.
 #'
-#' @param file \code{character}, path to corresponding fid file
+#' @param fidFile \code{character}, path to corresponding fid file
 #'  (e.g. \code{Pankreas_HB_L_061019_A10/0_a19/1/1SLin/fid})
 #' @param verbose \code{logical}, print verbose messages?
 #'
