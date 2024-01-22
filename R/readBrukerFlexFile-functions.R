@@ -144,10 +144,10 @@
 #'  A \code{list} of spectra and metadata.
 #'
 #'  \itemize{
-#'     \item{\code{spectrum$mass}: }{A vector of calculated mass.}
-#'     \item{\code{spectrum$tof}: }{A vector of time-of-flight data.}
-#'     \item{\code{spectrum$intensity}: }{A vector of intensity values.}
-#'     \item{\code{metaData}: }{A list of metaData depending on read spectrum.}
+#'     \item{\code{spectrum$mass}: A vector of calculated mass.}
+#'     \item{\code{spectrum$tof}: A vector of time-of-flight data.}
+#'     \item{\code{spectrum$intensity}: A vector of intensity values.}
+#'     \item{\code{metaData}: A list of metaData depending on read spectrum.}
 #' }
 #' @export
 #' @seealso
