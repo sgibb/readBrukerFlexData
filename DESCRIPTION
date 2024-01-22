@@ -1,6 +1,6 @@
 Package: readBrukerFlexData
-Version: 1.9.1
-Date: 2023-03-31
+Version: 1.9.2
+Date: 2024-01-22
 Title: Reads Mass Spectrometry Data in Bruker *flex Format
 Authors@R:
     c(
@@ -23,8 +23,9 @@ Description: Reads data files acquired by Bruker Daltonics' matrix-assisted
     laser desorption/ionization-time-of-flight mass spectrometer of the *flex
     series.
 License: GPL (>= 3)
-URL: https://strimmerlab.github.io/software/maldiquant/
+URL: https://strimmerlab.github.io/software/maldiquant/,
     https://github.com/sgibb/readBrukerFlexData/
 BugReports: https://github.com/sgibb/readBrukerFlexData/issues/
 LazyLoad: yes
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.0
+Encoding: UTF-8

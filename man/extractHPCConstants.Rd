@@ -25,9 +25,9 @@ hpcStr <- "V1.0CHPCData  Order 10 vCoeff V1.0VectorDouble 11
 \value{
 a \code{list}:
  \itemize{
-   \item{\code{hpcConstants$coefficients}: }{double, vector of coefficents}
-   \item{\code{hpcConstants$calibrationConstant0}: }{c0}
-   \item{\code{hpcConstants$calibrationConstant2}: }{c2}
+   \item{\code{hpcConstants$coefficients}: double, vector of coefficents}
+   \item{\code{hpcConstants$calibrationConstant0}: c0}
+   \item{\code{hpcConstants$calibrationConstant2}: c2}
  }
 }
 \description{

@@ -26,14 +26,13 @@
 #' \cr \cr
 #' All trademarks are owned by or licensed to Bruker Daltonics.
 #'
-#' @docType package
 #' @name readBrukerFlexData-package
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de}
 #' @references \url{https://github.com/sgibb/readBrukerFlexData}
 #' @keywords package
 #' @rdname readBrukerFlexData-package
 #'
-NULL
+"_PACKAGE"
 
 #' These functions are defunct and no longer available.
 #'

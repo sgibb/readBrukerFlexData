@@ -2,6 +2,7 @@
 % Please edit documentation in R/package.R
 \docType{package}
 \name{readBrukerFlexData-package}
+\alias{readBrukerFlexData}
 \alias{readBrukerFlexData-package}
 \title{The readBrukerFlexData Package}
 \description{
@@ -15,6 +16,15 @@ All trademarks are owned by or licensed to Bruker Daltonics.
 }
 \references{
 \url{https://github.com/sgibb/readBrukerFlexData}
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://strimmerlab.github.io/software/maldiquant/}
+  \item \url{https://github.com/sgibb/readBrukerFlexData/}
+  \item Report bugs at \url{https://github.com/sgibb/readBrukerFlexData/issues/}
+}
+
 }
 \author{
 Sebastian Gibb \email{mail@sebastiangibb.de}

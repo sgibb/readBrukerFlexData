@@ -43,9 +43,9 @@ all intensities equal \code{0.0} are removed.
 \value{
 A \code{list} of spectra.
 \itemize{
-    \item{\code{[[1]]$spectrum$mass}: }{A vector of calculated mass.}
-    \item{\code{[[1]]$spectrum$intensity}: }{A vector of intensity values.}
-    \item{\code{[[1]]$metaData}: }{A list of metaData depending on read spectrum.}
+    \item{\code{[[1]]$spectrum$mass}: A vector of calculated mass.}
+    \item{\code{[[1]]$spectrum$intensity}: A vector of intensity values.}
+    \item{\code{[[1]]$metaData}: A list of metaData depending on read spectrum.}
 }
 }
 \description{

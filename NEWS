@@ -1,6 +1,11 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.9.2 [2024-01-22]:
+- Fix: lost braces in extractHPCConstants.Rd, readBrukerFlexDir.Rd, and
+  readBrukerFlexFile.Rd.
+- Fix: fidFile argument in usage section in readAcquFile.Rd.
+
 Version 1.9.1 [2023-03-31]:
 - Read acqus file if acqu file is missing.
   Suggested by Daniel Vogel (@herr-vogel).
