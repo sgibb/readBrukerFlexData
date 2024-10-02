@@ -6,6 +6,6 @@ test_that("sampleName", {
     )
     name <- c("2_100kDa", "Pankreas_HB_L_061019_A10", "LT_1631_05_smear")
 
-    for (i in seq(along=files))
+    for (i in seq_along(files))
         expect_equal(.sampleName(files[i]), name[i])
 })
