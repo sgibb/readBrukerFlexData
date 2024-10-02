@@ -1,6 +1,6 @@
 Package: readBrukerFlexData
-Version: 1.9.2
-Date: 2024-01-22
+Version: 1.9.3
+Date: 2024-10-02
 Title: Reads Mass Spectrometry Data in Bruker *flex Format
 Authors@R:
     c(
@@ -27,5 +27,5 @@ URL: https://strimmerlab.github.io/software/maldiquant/,
     https://github.com/sgibb/readBrukerFlexData/
 BugReports: https://github.com/sgibb/readBrukerFlexData/issues/
 LazyLoad: yes
-RoxygenNote: 7.3.0
+RoxygenNote: 7.3.1
 Encoding: UTF-8

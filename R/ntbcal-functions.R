@@ -19,7 +19,7 @@
 #' @keywords internal
 #' @noRd
 .extractV10CTOF2CalibrationConstants <- function(x) {
-    x <- gsub("^.*V1.0CTOF2CalibrationConstants ([0-9. -]*) V1.0CTOF2CalibrationConstants.*$", "\\1", x)
+    x <- gsub("^.*V1.0CTOF2CalibrationConstants ([0-9. -e]*) V1.0CTOF2CalibrationConstants.*$", "\\1", x)
     ## suppress warnings about NA introduction for empty strings
     suppressWarnings(as.numeric(unlist(strsplit(x, " ", fixed = TRUE))))
 }

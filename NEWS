@@ -1,6 +1,10 @@
 RELEASE HISTORY OF THE "readBrukerFlexData" PACKAGE
 ===================================================
 
+Version 1.9.3 [2024-10-02]:
+- Fix: parse "V1.0TOF2CalibrationConstants" stored in scientific notation.
+  Thanks to Daniel Vogel <daniel.vogel@mabritec.com> for reporting this problem.
+
 Version 1.9.2 [2024-01-22]:
 - Fix: lost braces in extractHPCConstants.Rd, readBrukerFlexDir.Rd, and
   readBrukerFlexFile.Rd.
